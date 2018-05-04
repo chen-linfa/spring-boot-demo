@@ -1,0 +1,49 @@
+button[disabled]{
+  .opacity(@opacity-base);
+  cursor: default;
+}
+.btn {
+  &.btn-min-width {
+    min-width: @button-min-width;
+  }
+  &:focus, &:active:focus {
+    outline: 0;
+    .box-shadow(none);
+  }
+}
+.btn-separate-group,
+.btn-separate-group-vertical {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.btn-separate-group > .btn {
+  float: left;
+  margin-right: @form-group-margin-bottom;
+}
+
+.btn-separate-group-vertical > .btn {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: @form-group-margin-bottom;
+}
+.btn-outline-danger {
+  .button-color-variant(@btn-outline-danger-color; @btn-outline-danger-bg; @btn-outline-danger-border);
+}
+.btn-outline-warning {
+  .button-color-variant(@btn-outline-warning-color; @btn-outline-warning-bg; @btn-outline-warning-border);
+}
+.btn-outline-info {
+  .button-color-variant(@btn-outline-info-color; @btn-outline-info-bg; @btn-outline-info-border);
+}
+.btn-outline-success {
+  .button-color-variant(@btn-outline-success-color; @btn-outline-success-bg; @btn-outline-success-border);
+}
+.btn-outline-primary {
+  .button-color-variant(@btn-outline-primary-color; @btn-outline-primary-bg; @btn-outline-primary-border);
+}
+.btn-icon {
+  .button-variant(@btn-icon-color; @btn-icon-bg; @btn-icon-border);
+}

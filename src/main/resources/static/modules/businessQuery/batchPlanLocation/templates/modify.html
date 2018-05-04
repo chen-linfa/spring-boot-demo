@@ -1,0 +1,137 @@
+<div class="modal-header clearfix">
+    <span class="modal-title js-title">添加批量计划定位</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <form action="" class="js-form"> 
+        <!-- <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>集团编号：<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" id="vadd_cust_code">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>集团名称：<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" id="vadd_cust_name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-12">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>任务名称：<span class="text-danger"></span>
+                            </label>
+                            <input type="text" class="form-control" id="task_name" name="plan_name">
+                            <input type="hidden" class="form-control" id="plan_id" name="plan_id">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>开始时间：<span class="text-danger"></span></label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="modify_begin_time" name="begin_time">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>结束时间：</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="modify_end_time" name="end_time">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>执行类型：</label>
+                        <div>
+                            <input type="text" id="exec_type" name="exec_type" class="js-exec-type" name="exec_type" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>定位频率：</label>
+                        <input type="text" name="loc_rate" class="form-control js-loc-rate-hour" readonly/>
+                        <div class="hidden js-loc-rate-min-div">
+                            <input type="text" class="js-loc-rate-min" name="loc_rate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-12">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>优先级：<span class="text-danger"></span>
+                            </label>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <input type="text" class="form-control" id="vadd_plan_prior"  name="plan_prior">
+                                </div>
+                                <div class="col-xs-8">
+                                    <label class="fwn" style="margin-top: 5px">数字越大优先级越高, 最小是0</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row js-hide-row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-12">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label class="control-label">上传文件：<span class="text-danger"></span>
+                            </label>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control js-file"  id="upload_msisdn" name="upload_msisdn">
+                                </div>
+                                <div class="col-xs-3">
+                                    <label class="btn btn-default btn-block" type="button" for="loc_project_file"><i class="ico-upload margin-sm-right"></i>上传号码</label>
+                                    <input type="file" id="loc_project_file" style="visibility:hidden;height:0px;">
+                                </div>
+                                <div class="col-xs-3">
+                                    <button class="btn btn-default btn-block" type="button" name='templ_download_btn' id="templ_download_btn"><i class="ico-download margin-sm-right"></i>模板下载</button>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer clearfix">
+    <div class="form-group no-margin-bottom fr">
+        <button class="btn btn-primary js-submit" type="button">提交</button>
+        <button class="btn btn-default js-cancel" type="button" data-dismiss="modal">返回</button>
+    </div>  
+</div>

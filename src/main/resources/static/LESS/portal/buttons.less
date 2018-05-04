@@ -1,0 +1,28 @@
+.btn-default{
+  background-color: @component-base-color;
+  border-color: @btn-default-border;
+  color: @btn-default-color;
+  &:hover,&:focus,&:active,&:active:focus{
+    border-color: @btn-primary-bg;
+    background-color: @component-base-color;
+    color: @btn-primary-bg;
+  }
+}
+
+.btn-separate-group,
+.btn-separate-group-vertical{
+	>.btn{
+		background-color: @btn-default-color;
+		color: @component-base-color;
+		 &:hover,&:focus,&:active,&:active:focus{
+		 	color: @component-base-color;
+			border-color: @btn-default-border;
+			background-color: darken(@btn-default-color, 7%);
+		}
+		&[disabled]{
+			background-color: @input-bg-disabled;
+			color: @btn-default-color;
+			.opacity(1);
+		}
+	}
+}

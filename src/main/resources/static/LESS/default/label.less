@@ -1,0 +1,53 @@
+.ui-label-container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    color: @input-color;
+    .ui-dynamic-labels {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        outline: 0;
+        background-color: @input-bg;
+        cursor: text;
+        li {
+            float: left;
+            list-style: none;
+            &.label-item {
+                position: relative;
+                margin: 0 @label-item-margin @label-item-margin 0;
+                padding: @label-item-padding - 10 @label-item-padding;
+                border: 1px solid @label-border-color;
+                border-radius: @label-item-border-radius;
+                cursor: pointer;
+                >span {
+                    display: inline-block;
+                    max-width: @label-span-max-width;
+                    .text-overflow(ellipsis);
+                    vertical-align: middle;
+                }
+                .label-item-close {
+                    color: lighten(@gray-light, 20%);
+                    padding: 0;
+                    background: transparent;
+                    border: none;
+                    -webkit-appearance: none;
+                    vertical-align: middle;
+                    &:hover {
+                        color: @gray-light;
+                    }
+                    &[disabled] {
+                        cursor: @cursor-disabled;
+                        color: lighten(@gray-light, 20%);
+                    }
+                    .glyphicon {
+                        top: (3 - (@font-size-base / 12));
+                    }
+                }
+            }
+        }
+    }
+}

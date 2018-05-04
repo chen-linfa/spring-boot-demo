@@ -1,0 +1,15 @@
+// --------button color variant------------------
+.button-color-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  &:focus,
+  &.focus,
+  &:hover,
+  &:active,
+  &.active {
+    color: @background;
+    background-color: @color;
+        border-color: @border;
+  }
+}

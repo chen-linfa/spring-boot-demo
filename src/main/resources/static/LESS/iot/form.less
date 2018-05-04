@@ -1,0 +1,62 @@
+.form-control{
+    padding: @padding-base-vertical @padding-middle-horizontal;
+    line-height: @input-line-height;
+}
+
+
+.form-inline {
+    .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+      margin-right: @padding-small-horizontal;
+      &.margin-lg-right{
+        margin-right: @padding-large-horizontal;
+      }
+    }
+    .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+    .form-control-static {
+      display: inline-block;
+    }
+
+    .input-group {
+      display: inline-table;
+      vertical-align: middle;
+
+      .input-group-addon,
+      .input-group-btn,
+      .form-control {
+        width: auto;
+      }
+    }
+    .input-group > .form-control {
+      width: 140px;
+    }
+    .control-label {
+      margin-bottom: 0;
+      margin-right: @padding-small-horizontal;
+      vertical-align: middle;
+    }
+    .radio,
+    .checkbox {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      vertical-align: middle;
+      label {
+        padding-left: 0;
+      }
+    }
+    .radio input[type="radio"],
+    .checkbox input[type="checkbox"] {
+      position: relative;
+      margin-left: 0;
+    }
+    .has-feedback .form-control-feedback {
+      top: 0;
+    }
+}

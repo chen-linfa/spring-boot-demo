@@ -1,0 +1,131 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">成员管理></a><span class="current">一键式诊断</span>
+</div>
+<div class="panel">
+    <div class="panel-control-bar">
+        <form action="" class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="请输入卡号" id="search_input">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="button" id="btn_diagnose">查询</button>
+                <button class="btn btn-default" type="button" id="btn_retry">重新诊断</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<div class="iot-panel-group">
+    <div class="panel" style="display:none;" id="showView">
+        <div class="panel-heading clearfix">
+            <div class="panel-title fl" id="msisdn">
+                MSISDN(卡号)：
+
+            </div>
+            <div class="form-group fr">
+                <button class="btn btn-default" type="button" id="btn_message">发送短信</button>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="diagnosis-state clearfix">
+                <div class="dia-box">
+                    <table class="state-table" id="info_left">
+                        <tr>
+                            <th>在线</th>
+                            <td name="gprs_online_status"></td>
+                        </tr>
+                        <tr>
+                            <th>SIM卡状态</th>
+                            <td name="card_status"></td>
+                        </tr>
+                        <tr>
+                            <th>已到用量阈值</th>
+                            <td name="isOverFlow"></td>
+                        </tr>
+                        <tr>
+                            <th>本月流量使用</th>
+                            <td name="flowUsed"></td>
+                        </tr>
+                        <tr>
+                            <th>本月余额</th>
+                            <td name="balance_real"></td>
+                        </tr>
+                        <tr>
+                            <th>本月话费</th>
+                            <td name="bill_fee"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="dia-box">
+                    <table class="state-table" id="info_right">
+                        <tr>
+                            <th class="r-th"><i class="ico-sim margin-right" name="isNomal_1" ></i>SIM卡状态</th>
+                            <!--红色图标在类名后加warn,ico-connect-warn-->
+                            <td name="card_status">状态已激活</td>
+                        </tr>
+                        <tr>
+                            <th class="r-th"><i class="ico-connect margin-right"  name="isNomal_2" ></i>通信</th>
+                            <td name="gprs_online_status">GPRS功能正常</td>
+                        </tr>
+<!--                         <tr> -->
+<!--                             <th class="r-th"><i class="ico-equiet margin-right"></i>设备在线</th> -->
+<!--                             <td>设备启用中，连接正常</td> -->
+<!--                         </tr> -->
+                        <tr>
+                            <th class="r-th"><i class="ico-sim margin-right" name="isNomal_3" ></i>是否超限</th>
+                            <td name="isOverFlow">流量使用超过阈值</td>
+						</tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sim-state">
+                <div class="title">
+                    SIM卡详细信息
+                </div>
+                <table class="equipment-info" id="bottom_info">
+                    <tr>
+                        <th>卡号：</th>
+                        <td name="msisdn" class="pdr80"></td>
+                        <th>ICCID：</th>
+                        <td name="iccid" class="pdr80"></td>
+                        <th>IMSI：</th>
+                        <td name="imsi"></td>
+                    </tr>
+                    <tr>
+                        <th>APN：</th>
+                        <td  name="apn"></td>
+                        <th>卡品牌：</th>
+                        <td name="card_brand_type"></td>
+                        <th>卡号状态：</th>
+                        <td name="card_status"></td>
+                    </tr>
+                    <tr>
+                        <th>是否加入流量池：</th>
+                        <td name="is_orderflows"></td>
+                        <th>本月使用流量：</th>
+                        <td name="used_gprs"></td>
+                        <th>本月使用短信：</th>
+                        <td name="used_msg"></td>
+                    </tr>
+                    <tr>
+                        <th>本月使用通话分钟数：</th>
+                        <td name="used_voice"></td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>

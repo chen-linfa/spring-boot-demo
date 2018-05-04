@@ -1,0 +1,57 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">修改密码</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <form action="">
+    	<div class="row">
+            <div class="compile-app clearfix">
+             <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>原密码<span class="text-danger">*</span>：</label>
+                            <input type="password" class="form-control" name="old_password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>密码<span class="text-danger">*</span>：
+                       
+                            </label>
+                            <div class="password-level fr">
+                                <ul class="clearfix level-list">
+                                    <li class="fl margin-md-right" id="strength_text"></li>
+                                    <li class="level-list-item active-low" style="display:none;"></li>
+                                    <li class="level-list-item active-middle" style="display:none;"></li>
+                                    <li class="level-list-item active-high" style="display:none;"></li>
+                                </ul>
+                            </div>
+
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>确认密码<span class="text-danger">*</span>：</label>
+                            <input type="password" class="form-control" name="confirm_pwd">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer clearfix">
+    <div class="form-group no-margin-bottom fr">
+        <button class="btn btn-primary" id="btn_submit" type="button">确定</button>
+        <button class="btn btn-default" data-dismiss="modal" type="button">取消</button>
+    </div>
+</div>

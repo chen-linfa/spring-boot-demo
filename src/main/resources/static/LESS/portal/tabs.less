@@ -1,0 +1,77 @@
+.ui-tabs {
+    &.tabs-border {
+        background-color: @tabs-border-bg;
+        border: 1px solid @nav-tabs-border-color;
+        >.ui-tabs-nav,
+        .ui-tabs-panel .ui-tabs.tabs-border .ui-tabs-nav {
+            background-color: @tabs-border-bg;
+            border-bottom: 1px solid @nav-tabs-border-color;
+            > li > a {
+                padding: 13px 25px 11px;
+                margin-right: 0;
+                border: 0;
+                background: transparent;
+                &:hover,
+                &:focus {
+                    color: @tabs-border-link-hover-color;
+                    background:transparent;
+                    border: 0;
+                }
+            }
+            li.ui-tabs-active > a {
+                &,
+                &:hover,
+                &:focus {
+                    padding: 13px 25px 11px;
+                    margin-bottom: -1px;
+                    background: transparent;
+                    color: @tabs-border-active-link-hover-color;
+                    border: 0;
+                    border-bottom: 1px solid @tabs-border-active-link-hover-border-color;
+                }
+            }
+        }
+        .ui-tabs-panel .ui-tabs .ui-tabs-nav {
+            &:extend(.ui-tabs > .ui-tabs-panel);
+        }
+        .ui-tabs-nav,
+        .ui-tabs-panel {
+            padding: 0;
+        }
+    }
+    &.tabs-pill {
+        border: 0;
+        .ui-tabs-nav {
+          background-color: transparent;
+          border: 0;
+          li {
+            a {
+              margin-bottom: 0;
+              border: 1px solid @nav-tabs-border-color;
+              &:hover,
+              &:focus {
+                border-width: 1px;
+                border-style:solid;
+                .basic-color(@nav-tabs-pill-color; @nav-tabs-pill-bg; @nav-tabs-pill-border-color);
+                border-bottom: 1px solid @nav-tabs-pill-border-color;
+              }
+            }
+            &.ui-tabs-active > a {
+              &,
+              &:hover,
+              &:focus {
+                margin-bottom: 0;
+                border-width: 1px;
+                border-style:solid;
+                .basic-color(@nav-tabs-pill-active-color; @nav-tabs-pill-active-bg; @nav-tabs-pill-active-bg);
+              }
+            }
+          }
+        }
+    }
+}
+.tabs-border + .panel,
+.tabs-border + .ui-jqgrid,
+.tabs-border + .tabs-border {
+    margin-top: 8px;
+}

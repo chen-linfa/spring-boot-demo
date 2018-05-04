@@ -1,0 +1,57 @@
+<div>
+	<div class="iot-loaction-bar">
+	    当前位置：<a href="#" class="link-text">业务订购>成员查询>成员号码查询</a>
+	</div>
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	                <div class="form-group">
+	                    <input type="text" class="form-control" placeholder="请输入MSISDM卡号" id="search_input">
+	                </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button" id="btn_search">查询</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel panel-default">
+	        <table class="table table-striped m-num-m-table" id="detailtab">
+	        </table>
+	        <table style="display:none;">
+	                <tr id="detail_tr">
+	                    <td colspan="6" class="no-border-bg">
+	                        <div class="expand clearfix">
+	                            <ul>
+	                                <li>卡号：<span name="msisdn"></span></li>
+	                                <li>ICCID：<span name="iccid"></span></li>
+	                                <li>卡品牌：<span name="card_brand_type"></span></li>
+	                                <li>卡号状态：<span name="card_status"></span></li>
+	                                <li>是否加入流量池：<span name="">否</span></li>
+	                                <li>本月使用流量：<span name="used_gprs"></span></li>
+	                                <li>本月使用短信：<span name="used_msg"></span></li>
+	                                <li>本月使用通话分钟数：<span name="used_voice"></span></li>
+	                            </ul>
+	                        </div>
+	                    </td>
+	                </tr>
+	        </table>
+	    </div>
+	    <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num">0</span>页</span>
+	            <span><span class="page-data-count">0</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group">
+	                <div id="pagination-demo" class="js-pagination"></div>
+	            </div>
+	        </div>
+	    </div>
+	     <div class="panel-footer clearfix">
+	         <div class="page-foot-data margin-md-left">
+	             <button class="btn btn-default js-btn_back" type="button">返回</button>
+	         </div>
+	     </div>
+	</div>
+</div>

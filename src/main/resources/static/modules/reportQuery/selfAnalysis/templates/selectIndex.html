@@ -1,0 +1,325 @@
+<div id="allDiv">
+<div id="step_one">
+	<div class="iot-loaction-bar">
+	    当前位置：<a href="#" class="link-text">报表查询></a><span class="current">新增报表</span><a class="fr text-brand-primary back" href="#">返回上一层</a>
+	</div>
+	<div class="panel">
+	    <div class="panel-select-bar">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选择指标</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">2</span>
+	                    <span class="text-weaker-color">选择查询维度</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">3</span>
+	                    <span class="text-weaker-color">选择指标明细</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	
+	</div>
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <label for="" class="control-lable margin-md-left">报表名称：</label>
+	                    <div class="input-group">
+	                        <input type="text" id="name" class="form-control" placeholder="输入信息～">
+	                    </div>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel">
+	        <div class="panel-body">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                	<input type="text" id="input_id" />
+	                	 
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	     <div class="panel panel-default">
+	        <table class="table table-striped" id="xtab">
+	        </table>
+	    </div>
+	    
+	     <div class="submit-bar pd-diff">
+	         <div class="form-group">
+	             <button class="btn btn-primary" type="button" id="next_1">下一步</button>
+	         </div>
+	
+	     </div>
+	</div>
+</div>
+<div id="step_two" style="display:none;">
+	<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">报表查询><span class="current">新增报表</span>
+    <a class="fr text-brand-primary back" href="#" >返回上一层</a>
+	</div>
+	<div class="panel">
+	    <div class="panel-select-bar">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选择指标</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">2</span>
+	                    <span class="text-weaker-color">选择查询维度</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">3</span>
+	                    <span class="text-weaker-color">选择指标明细</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	
+	</div>
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <label for="" class="control-lable margin-md-left">报表名称：</label>
+	                    <div class="input-group report_name">
+	                        
+	                    </div>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <label for="" class="control-lable margin-md-left margin-sm-top no-margin-bottom">已选指标：</label>
+	                </div>
+	                <div class="form-group">
+	                    <ul class="label-list selected-index">
+	                    </ul>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="col-xs-6">
+	        <div class="row">
+	            <div class="panel">
+	                <div class="had-select">
+	                    <div class="select-inner">
+	                        <div class="panel-heading clearfix">
+	                            <div class="panel-title fl">公共维度<span class="text-warning fwn f12"></span></div>
+	                        </div>
+	                        <div class="search-result border-top">
+	                            <ul class="diff-list" id="public">
+	                            </ul>
+	                        </div>
+	                    </div>
+	
+	                </div>
+	
+	                <div class="submit-bar pd-diff">
+	                    <div class="form-group">
+	                        <button class="btn btn-primary" type="button" id="next_2">下一步</button>
+	                        <button class="btn btn-default" type="button" id="last_1">上一步</button>
+	                    </div>
+	
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col-xs-6">
+	        <div class="row">
+	            <div class="panel">
+	                <div class="had-select">
+	                    <div class="select-inner">
+	                        <div class="panel-heading clearfix">
+	                            <div class="panel-title fl">指标专属维度<span class="text-warning fwn f12">（专属维度必须选择）</span></div>
+	                        </div>
+	                        <div class="search-result border-top">
+	                            <ul class="diff-list" id="exclusive">
+	                            </ul>
+	                        </div>
+	                    </div>
+	
+	                </div>
+	
+	                <div class="submit-bar pd-diff"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+<div id="step_three" style="display:none;">
+	<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">报表查询></a><span class="current">新增报表</span>
+    <a class="fr text-brand-primary back" href="#">返回上一层</a>
+	</div>
+	<div class="panel">
+	    <div class="panel-select-bar">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选择指标</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">2</span>
+	                    <span class="text-brand-primary">选择查询维度</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">3</span>
+	                    <span class="text-weaker-color">选择指标明细</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	
+	</div>
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <label for="" class="control-lable margin-md-left">报表名称：</label>
+	                    <div class="input-group report_name">
+	                       
+	                    </div>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <label for="" class="control-lable margin-md-left margin-sm-top no-margin-bottom">已选指标：</label>
+	                </div>
+	                <div class="form-group">
+	                    <ul class="label-list selected-index">
+	                    </ul>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <label for="" class="control-lable margin-md-left margin-sm-top no-margin-bottom">已选维度：</label>
+	                </div>
+	                <div class="form-group">
+	                    <ul class="label-list selected-difficulty">
+	                       
+	                    </ul>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <label for="" class="control-lable margin-md-left margin-sm-top no-margin-bottom">报表样式：</label>
+	                </div>
+	                <div class="radio">
+                         <label id="default" style="color:#3f4f66;font-size:14px;">
+		                     <input class="js-check" type="radio" name="" value="0">纵向排版
+		                 </label>
+                         <label id="no_default" style="color:#3f4f66;font-size:14px;">
+		                      <input class="js-check margin-lg-left" type="radio" name="" value="1">横向排版
+		                 </label>
+                     </div>
+	            </form>
+	        </div>
+	    </div>
+	    
+	    <div class="col-xs-12">
+	        <div class="row">
+	            <div class="panel">
+	                <div id="attr_div" class="had-select" style="height:120px;">
+	                    <div class="select-inner" >
+	                        <div class="panel-heading clearfix">
+	                            <div class="panel-title fl">指标明细<span class="text-warning fwn f12"></span></div>
+	                        </div>
+	                        <div class="search-result border-top">
+	                            <ul class="diff-list" id="public_attr">
+	                            </ul>
+	                        </div>
+	                    </div>
+	
+	                </div>
+	
+	                
+	
+	
+	                 <div class="submit-bar pd-diff">
+	                      <div class="form-group">
+	                        <button class="btn btn-primary" type="button" id="btn_submit">保存报表</button>
+	                        <button class="btn btn-default" type="button" id="last_2">上一步</button>
+	                    </div>
+	
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col-xs-6" style="display:none">
+	          <div class="row">
+	            <div class="panel">
+	                <div class="had-select">
+	                    <div class="select-inner">
+	                        <div class="panel-heading clearfix">
+	                            <div class="panel-title fl">指标专属属性<span class="text-warning fwn f12"></span></div>
+	                        </div>
+	                        <div class="search-result border-top">
+	                            <ul class="diff-list" id="exclusive_attr">
+	                                
+	                            </ul>
+	                        </div>
+	                    </div>
+	
+	                </div>
+	              
+	                    <div class="submit-bar">
+	                  
+	                </div>
+	
+	               <div class="submit-bar pd-diff"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+</div>

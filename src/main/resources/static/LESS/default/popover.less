@@ -1,0 +1,69 @@
+.popover {
+    &.bottom-left,
+    &.bottom-right {
+        margin-top: @popover-arrow-width;
+    }
+    &.top-right,
+    &.top-left {
+        margin-top: -@popover-arrow-width;
+    }
+}
+
+.popover {
+    &.bottom-left .arrow {
+        left: @popover-arrow-outer-width;
+        border-top-width: 0;
+        border-bottom-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+        border-bottom-color: @popover-arrow-outer-color;
+        top: -@popover-arrow-outer-width;
+        &:after {
+            content: " ";
+            top: 1px;
+            margin-left: -@popover-arrow-width;
+            border-top-width: 0;
+            border-bottom-color: @popover-arrow-color;
+        }
+    }
+    &.bottom-right .arrow {
+        right: @popover-arrow-outer-width;
+        border-top-width: 0;
+        border-bottom-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+        border-bottom-color: @popover-arrow-outer-color;
+        top: -@popover-arrow-outer-width;
+        &:after {
+            content: " ";
+            top: 1px;
+            margin-left: -@popover-arrow-width;
+            border-top-width: 0;
+            border-bottom-color: @popover-arrow-color;
+        }
+    }
+    &.top-left .arrow {
+        left: @popover-arrow-outer-width;
+        border-bottom-width: 0;
+        border-top-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+        border-top-color: @popover-arrow-outer-color;
+        bottom: -@popover-arrow-outer-width;
+        &:after {
+            content: " ";
+            bottom: 1px;
+            margin-left: -@popover-arrow-width;
+            border-bottom-width: 0;
+            border-top-color: @popover-arrow-color;
+        }
+    }
+    &.top-right .arrow {
+        right: @popover-arrow-outer-width;
+        border-bottom-width: 0;
+        border-top-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+        border-top-color: @popover-arrow-outer-color;
+        bottom: -@popover-arrow-outer-width;
+        &:after {
+            content: " ";
+            bottom: 1px;
+            margin-left: -@popover-arrow-width;
+            border-bottom-width: 0;
+            border-top-color: @popover-arrow-color;
+        }
+    }
+}

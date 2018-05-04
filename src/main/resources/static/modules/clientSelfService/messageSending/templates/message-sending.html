@@ -1,0 +1,136 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">客户自助服务></a><a class="current">短信发送</a>
+</div>
+
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="message-send-box">
+            <ul class="row">
+                <li class="col-xs-4 select">
+                    <div class="msb-item-gd active">
+                        <span class="send-tips ">群发</span>
+                        <p class="remark-tips">限制20个</p>
+                    </div>
+                </li>
+                <li class="col-xs-4 select" >
+                    <div class="msb-item-batch">
+                        <span class="send-tips">上传批量发送</span>
+                        <p class="remark-tips">批量发送文件大小限制10M</p>
+                    </div>
+                </li>
+                <li class="col-xs-4 select" >
+                    <div class="msb-item-grouping" >
+                        <span class="send-tips">分组发送</span>
+                        <p class="remark-tips">最多可以发送100个群</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-xs-1 control-lable">接收号码：</label>
+                    <div class="col-xs-10" >
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <input class="form-control" id="accept_num">
+                            </div>
+                            <div class="col-xs-9">
+                                <button class="btn btn-default" type="button" id="addPhone">添加</button>
+                                <span style="color:red;" name="send_msisdn_tip"></span>
+                                <label class="btn btn-default" type="button" style="display: none" for="upload" id="bt_upload"><i class="ico-upload margin-sm-right"></i>上传号码文件</label>
+                                
+                                <button class="btn btn-default" type="button" style="display: none" id="download"><i class="ico-download margin-sm-right"></i>下载批量发送模版</button>
+                                <button class="btn btn-default" type="button" style="display: none" id="select_group">选择分组</button>
+                            </div>
+                        </div>
+                        <div class="margin-sm-top">
+                            <ul class="phone-num-list label-list" name="send_show"> </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="file" id="upload" style="visibility:hidden;height:0px;">
+                <div class="form-group">
+                    <label class="col-xs-1 control-lable">内容：</label>
+                    <div class="col-xs-8">
+                        <textarea class="form-control" rows="3" placeholder="限制960字" id="textarea_content"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-1 control-lable">发送方式：</label>
+                    <div class="col-xs-11">
+                        <div class="radio">
+                            <label>
+                                <input class="js-check just_time" type="radio" name="sendingType" val="actual">即时发送
+                            </label>
+                            <label>
+                                <input class="js-check margin-lg-left timing" type="radio" name="sendingType" val="regular">定时发送
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-1 control-lable">格式编码：</label>
+                    <div class="col-xs-11">
+                        <div class="radio">
+                            <label>
+                                <input class="js-check uds2" type="radio" name="encodingType" value="8">UCS2<span class="text-weaker-color">（支持中文，英文和数字）</span>
+                            </label>
+                            <label>
+                                <input class="js-check margin-lg-left ascii" type="radio" name="encodingType" value="0">ASCII<span class="text-weaker-color">（仅支持数字和英文，发送内容不带签名）</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-1 control-lable">短信类别：</label>
+                    <div class="col-xs-11">
+                        <div class="radio">
+                        	<label>
+                                <input class="js-check shortmsg" type="radio" name="message_category" value="shortmsg">短消息
+                            </label>
+                            <label>
+                                <input class="js-check margin-lg-left longmsg" type="radio" name="message_category" value="longmsg">长短信
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-1 control-lable">发送时间：</label>
+                    <div class="col-xs-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control js-date" placeholder="00:00:00" id="date_pick">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-1 control-lable">发送端口：</label>
+                    <div class="col-xs-2">
+                    	<input type="text" class="form-control margin-lg-right" name="gate_way_list">
+                    </div>
+                    <!-- <div class="col-xs-2">
+                        <select name="gate_option" id="js-selectmenu" class="form-control gateway_id" >
+                            <option class='inp-slt-item' value='1'>1064899091416</option>
+                            <option class='inp-slt-item' value='1'>1064893091416</option>
+                            <option>18065434212</option>
+                            <option>18065434213</option>
+                            <option>18065434214</option>
+                        </select>
+                    </div> -->
+                </div>
+                 <div class="form-group">
+                    <label class="col-xs-1 control-lable"></label>
+                    <div class="col-xs-2">
+                        <button class="btn btn-primary" type="button" id="ok">确定</button>
+                        <button class="btn btn-default" type="button" id="reset">重置</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

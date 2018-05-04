@@ -1,0 +1,36 @@
+.ui-jqgrid + .panel,
+.ui-jqgrid + .ui-jqgrid,
+.ui-jqgrid + .tabs-border {
+    margin-top: 8px;
+}
+//无边框的表格
+.panel > .ui-jqgrid,
+.tabs-border .ui-jqgrid {
+    border-bottom: 0;
+    margin-bottom: 0;
+    .ui-jqgrid-titlebar,
+    .ui-jqgrid-hdiv,
+    .ui-jqgrid-bdiv,
+    .ui-jqgrid-pager {
+        border-left: 0;
+        border-right: 0;
+    }
+    .ui-jqgrid-hdiv {
+        border-top: 0;
+    }
+    .ui-jqgrid-titlebar {
+        border-top: 0;
+        border-bottom: @grid-border;
+    }
+}
+//有顶边框的表格
+.panel > form + .ui-jqgrid,
+.tabs-border form + .ui-jqgrid {
+    .ui-jqgrid-hdiv {
+        border-top: @grid-border;
+    }
+    .ui-jqgrid-titlebar {
+        border-top: @grid-border;
+        border-bottom: 0;
+    }
+}

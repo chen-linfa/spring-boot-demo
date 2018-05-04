@@ -1,0 +1,84 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">新增告警规则</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <form action="">
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-12">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>规则名称<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" name="cfg_name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>分类<span class="text-danger">*</span>：
+                            </label>
+                            <input type="text" class="form-control" name="cat_id">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>规则<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" name="rule_code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+        <label>填写规则参数：</label>
+        	<div id="ruleattr">
+        		不需要填写
+        	</div>
+        	<div style="display:none;" id="attr_template">
+	        	<label name="">规则：</label>
+	            <input type="text" class="form-control">
+        	</div>
+        	<div id="flow_unit" style="display:none;">
+        		<label name="">流量单位：</label>
+        		<label><input type="radio" name="flow_unit" value="G" />G</label>
+        		<label><input type="radio" name="flow_unit" value="M" checked="true"/>M</label>
+        	</div>
+        	<div id="imei_attr" style="display:none;">
+        		<label name="">IMEI池：</label>
+        		<div>当前已选号码数：<span id="imei_num">0</span></div>
+        		<button class="btn btn-default" type="button" id="btn_downimei">下载IMEI号码模板</button>
+        		<label class="btn btn-default" for="imei_file">上传IMEI号码</label>
+        		<button class="btn btn-default" type="button" id="btn_imeipool">已选IMEI清单</button>
+        		<input type="file" id="imei_file" style="visibility:hidden;height:0px;"/>
+        	</div>
+    	</div>
+    	<div id="steplist">
+
+	    </div>
+	    	<div class="form-group" id="step_template" style="display:none;">
+		        <label name="step_name">选择执行方式：</label>
+		        <div name="opt_div"></div>
+		    </div>
+		    <div id="file_step_template" style="display:none;">
+		    	<div>当前已选号码数：<span class="js-num" >0</span></div>
+        		<button class="btn btn-default js-downtemp" type="button" id="btn_down">下载号码模板</button>
+        		<label class="btn btn-default js-uploadlabel" for="_file">上传号码</label>
+        		<button class="btn btn-default js-selected" type="button" id="btn_selected">已选号码清单</button>
+        		<input type="file" id="_file" class="js-input_file" style="visibility:hidden;height:0px;"/>
+        	</div>
+    </form>
+</div>
+<div class="modal-footer clearfix">
+    <div class="form-group no-margin-bottom fr">
+        <button class="btn btn-primary" id="btn_submit" type="button">确定</button>
+        <button class="btn btn-default" data-dismiss="modal" type="button">取消</button>
+    </div>
+</div>

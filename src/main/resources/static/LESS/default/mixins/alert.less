@@ -1,0 +1,42 @@
+// --------default------------------
+.modal(@color) {
+  width: auto;
+  padding: 0;
+  border: 1px solid @color;
+  min-width: @alert-min-width;
+  max-width: @alert-max-width;
+  .modal-header {
+    background-color: #fff;
+    > .close {
+      color: #000;
+    }
+  }
+  .modal-title {
+    color: @color;
+  }
+  .modal-body {
+    padding: 10px 15px;
+  }
+  .modal-message {
+    display: block;
+    background-color: #fff;
+    overflow-y: auto;
+    max-height: @modal-message-max-height;
+    min-height: @input-height-base;
+    word-wrap: break-word;
+  }
+
+  .modal-footer {
+    border-top-width: 0;
+    padding: 0 15px 15px 15px;
+  }
+
+  .@{icon-prefix} {
+    margin-top: -2px;
+    margin-right: 5px;
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: @line-height-base;
+    color: @color;
+  }
+}

@@ -1,0 +1,98 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">添加告警配置</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <form action="">
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>配置名称<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" id="warn_config_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>业务类型<span class="text-danger">*</span>：</label>
+                            <div id="add_men_type"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>限制类型<span class="text-danger">*</span>：</label>
+                            <div id="add_restrict_type"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>限制值<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" placeholder="两个限制值之间用‘|’隔开" id="restrict_value">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>值单位<span class="text-danger">*</span>：</label>
+                            <div id="add_unit"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>状态：</label>
+                            <div id="add_status_cd"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label>备注：</label>
+                    <textarea class="form-control" rows="4" placeholder="输入信息" id="comments"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group no-margin-bottom">
+            <label>选择成员<span class="text-danger" id="choose_mem_user_lable">*</span>：</label>
+            <div>
+                <label><input class="js-check margin-md-right" type="radio" name="" id="all_mem" ></label>全部成员
+            </div>
+            <div>
+                <label><input class="js-check margin-md-right" type="radio" name="" id ="part_mem"></label>选择部分成员<a href="#" class="margin-lg-left hidden" id="part_mem_show">选择成员</a>
+            </div>
+            <div>
+                <label><input class="js-check margin-md-right" type="radio" name="" id = "upload_mem"></label>上传Excel
+                <label for="" class="fwn margin-md-right hidden text-primary" id="download_templet" style="cursor: pointer;">模板下载</label>
+                <label for="loc_config_file" class="fwn hidden text-primary"  id="upload_mem_show" style="cursor: pointer;">上传附件</a></label>
+            </div>
+        </div>
+    </form>
+    <input type="file" id="loc_config_file" style="visibility: hidden;height:0px;">
+</div>
+<div class="modal-footer clearfix">
+    <div class="form-group no-margin-bottom fr">
+        <button class="btn btn-primary" type="button" id="submit_btn">提交</button>
+        <button class="btn btn-default" type="button" id="cancel_btn">取消</button>
+    </div>
+</div>

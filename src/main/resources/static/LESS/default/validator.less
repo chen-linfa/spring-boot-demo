@@ -1,0 +1,56 @@
+.ui-jqgrid .n-invalid{
+  border-color: @label-danger-bg!important;
+}
+
+.invalid.tooltip{
+  .tooltip-inner{
+    text-align:left;
+    background-color: @label-danger-bg
+  }
+  &.top .tooltip-arrow {
+    border-top-color: @label-danger-bg;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @label-danger-bg;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @label-danger-bg;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @label-danger-bg;
+  }
+  &.top-left .tooltip-arrow {
+    border-top-color: @label-danger-bg;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @label-danger-bg;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @label-danger-bg;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @label-danger-bg;
+  }
+}
+
+
+.checkbox-inline,.radio-inline{
+  .tooltip{
+    width: 129px;
+  }
+  .tooltip.left{
+    width: 139px;
+    left: -139px!important;
+  }
+  .tooltip.bottom-left{
+    top: 20px!important;
+  }
+  .tooltip.top-left{
+    top: -35px!important;
+  }
+}
+.icheckbox,.iradio {
+  .tooltip{
+    left: 0!important;
+  }
+}

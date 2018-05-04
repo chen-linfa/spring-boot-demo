@@ -1,0 +1,105 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">成员管理><a href="#" class="link-text">成员变更></a><span class="current">选套餐</span>
+    <a class="fr text-brand-primary js-btn_back" href="javascript:void(0);">返回上一层</a>
+</div>
+<div class="panel">
+    <div class="panel-select-bar">
+        <ul>
+            <li class="select-item">
+                <a href="#">
+                    <span class="num-circle active">1</span>
+                    <span class="text-brand-primary">选号码</span>
+                </a>
+                <i class="ico-right"></i>
+            </li>
+            <li class="select-item">
+                <a href="#">
+                    <span class="num-circle active">2</span>
+                    <span class="text-weaker-color">选套餐</span>
+                </a>
+                <i class="ico-right"></i>
+            </li>
+
+            <li class="select-item">
+                <a href="#">
+                    <span class="num-circle">3</span>
+                    <span class="text-weaker-color">确认提交</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="iot-panel-group">
+    <div class="col-xs-6">
+        <div class="row">
+            <div class="panel">
+
+                <div class="select-meal-box">
+                    <div class="meal-box-inner">
+                        <form class="form-inline"><!-- 
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="搜索套餐～">
+                            </div>
+                            
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="button">搜索</button>
+                            </div> -->
+                        </form>
+                        <div class="search-result">
+                        	<ul style="display:none;" id="prod_temp">
+                        	 <li><label class="no-margin-bottom">
+                                 <input class="js-check" type="checkbox" name="" >
+                              </label><span name="prod_name">套餐名称</span>
+                                    <form class="form-inline inbox">
+                                        <div class="form-group">
+                                            <select name="" class="form-control js-selectmenu">
+                                        <option value="">MMS</option>
+                                        </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="SMSPORT">
+                                        </div>
+                                    </form>
+                                </li>
+                        	</ul>
+                            <ul id="product_list">
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="padding-md submit-bar">
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="button" id="btn_submit">提交</button>
+                        <button class="btn btn-default" type="button" id="btn_back">上一步</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="row">
+            <div class="panel">
+                <div class="had-select">
+                    <div class="select-inner" style="overflow: auto;">
+                        <div class="panel-heading clearfix">
+                            <div class="panel-title fl">已选套餐</div>
+                            <button class="fr vacum-up" id="btn_clearselected">清空</button>
+                        </div>
+                        <ul id="selected_temp" style="display:none;">
+                        <li><span name="prod_name"></span><button class="vacum-up fr js-btn_sltclean"><i class="ico-del"></i></button></li>
+                        </ul>
+                        <ul id="selected_list">
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="submit-bar"></div>
+            </div>
+        </div>
+    </div>
+</div>

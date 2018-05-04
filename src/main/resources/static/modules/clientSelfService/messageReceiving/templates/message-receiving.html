@@ -1,0 +1,62 @@
+<div class="iot-loaction-bar">
+    当前位置：
+    <a href="#" class="link-text"></a>客户自助服务></a>
+    <a class="current">短信接收</a>
+
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="" class="control-label">开始时间：</label>
+                    <div class="input-group  margin-lg-right">
+                        <input type="text" class="form-control js-date" placeholder="-选择时间-" id="start_time">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="control-label">结束时间：</label>
+                    <div class="input-group  margin-lg-right">
+                        <input type="text" class="form-control js-date" placeholder="-选择时间-" id="end_time">
+                    </div>
+                </div>
+                <div class="form-group fr">
+                    <button class="btn btn-primary" type="button" id="query">查询</button>
+                </div>
+                <div class="form-group fr">
+                    <input type="text" class="form-control margin-lg-right" placeholder="请填写号码" id="search_input">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="panel panle-default">
+        <div class="mess-rec-bar">
+            <form class="form-inline">
+                <div class="form-group">
+                    <button class="btn btn-default" type="button" id="template_download"><i class="ico-download margin-sm-right"></i>上传号码查询模版下载</button>
+                    <!-- <button class="btn btn-default" type="button" id="number_upload"><i class="ico-upload margin-sm-right"></i>上传号码查询</button> -->
+                    <label class="btn btn-default" for="number_upload"><i class="ico-upload margin-sm-right" ></i>上传号码查询</label>
+                    <button class="btn btn-default" type="button" id="data_export"><i class="ico-upload margin-sm-right"></i>导出数据</button>
+                </div>
+            </form>
+            <input type="file" id="number_upload" style="visibility:hidden;height:0px;">
+        </div>
+
+    </div>
+    <div class="panel panel-default">
+        <table class="table table-striped" id="myTable"></table>
+    </div>
+    <div class="panel-footer clearfix">
+        <div class="page-foot-data">
+            <span>共<span class="page-total-num">0</span>页</span>
+            <span><span class="page-data-count">0</span>条数据</span>
+        </div>
+        <div class="page-foot-form">
+            <div class="input-group col-md-14">
+                <div id="pagination-demo" class="js-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

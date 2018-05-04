@@ -1,0 +1,41 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">配置成员</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix over-scroll">
+    <div class="iot-panel-group">
+      <div class="panel">
+            <div class="panel-control-bar">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="search_input" placeholder="请输入卡号：～">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="button" id="search_btn">查询</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <table class="table table-striped" id="imei_conf_list">
+            </table>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="page-foot-data">
+                <span>共<span class="page-total-num">0</span>页</span>
+                <span><span class="page-data-count">0</span>条数据</span>
+            </div>
+            <div class="page-foot-form">
+                <div class="input-group">
+                    <div id="pagination-demo" class="js-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="form-group no-margin-bottom">
+        <button class="btn btn-primary" type="button" id="submit_btn">确定</button>
+        <button class="btn btn-default" type="button" id="cancel_btn">取消</button>
+    </div>
+</div>

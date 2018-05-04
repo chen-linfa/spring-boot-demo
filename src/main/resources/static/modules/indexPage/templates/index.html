@@ -1,0 +1,196 @@
+<div class="iot-layout-panel">
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="idx-user-info">
+                <div class="info-title">用户情况概述</div>
+                <div class="row">
+                    <div class="col-xs-4 info-col">
+                        <div class="info-col-tit">当前用户</div>
+                        <div class="info-col-cont js-user-count"></div>
+                    </div>
+                    <div class="col-xs-4 info-col">
+                        <div class="info-col-tit">本月新增用户</div>
+                        <div class="info-col-cont js-add-user-count"></div>
+                    </div>
+                    <div class="col-xs-4 info-col">
+                        <div class="info-col-tit">本月退订用户</div>
+                        <div class="info-col-cont js-lost-user-count"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- col-xs-6 end -->
+        <div class="col-xs-6">
+            <div class="idx-group-info">
+                <div class="info-title">集团业务概览</div>
+                <div class="row">
+                    <div class="col-xs-4 info-col">
+                        <div class="info-col-tit">本月已用流量</div>
+                        <div class="info-col-cont js-count-flow-total"></div>
+                    </div>
+                    <div class="col-xs-4 info-col">
+                        <div class="info-col-tit">本月已用短信</div>
+                        <div class="info-col-cont js-count-msg-total"></div>
+                    </div>
+                    <div class="col-xs-4 info-col">
+                        <div class="info-col-tit">本月已用语言</div>
+                        <div class="info-col-cont js-count-voice-total"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- col-xs-6 end -->
+    </div>
+    <!-- row end -->
+</div>
+<!-- iot-layout-panel end -->
+
+<div class="iot-layout-panel">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="panel-title">号码状态分布</span>
+                </div>
+                <div class="panel-body">
+                    <div class="idx-chart-box js-chart-status"></div>
+                </div>
+            </div>
+            <!-- panel end -->
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="panel-title">号码品牌分布</span>
+                </div>
+                <div class="panel-body">
+                    <div class="idx-chart-box js-chart-brand"></div>
+                </div>
+            </div>
+            <!-- panel end -->
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="panel-title">流量使用情况分布</span>
+                </div>
+                <div class="panel-body">
+                    <ul class="idx-flow-info">
+                        <li class="info-item">
+                            <div class="info-item-tit">省内流量</div>
+                            <div class="info-item-num js-local-flow"></div>
+                            <div class="info-item-progress">
+                                <div class="progress-line js-local-flow-width"></div>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="info-item-tit">漫游流量</div>
+                            <div class="info-item-num js-roaming-flow"></div>
+                            <div class="info-item-progress">
+                                <div class="progress-line js-roaming-flow-width"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- panel end -->
+        </div>
+    </div>
+</div>
+<!-- iot-layout-panel end -->
+
+
+<div class="iot-layout-panel">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <span class="panel-title">成员业务量本月排行榜</span>
+                    <div class="pull-right">
+                        <a href="#" class="text-primary js-more-ranking-info">更多</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="idx-msg-box js-ranking">
+                        <div class="btn-group btn-group-justified btn-group-tabs js-ranking-tabs">
+                            <a href="#" class="btn btn-default activtead">流量</a>
+                            <a href="#" class="btn btn-default">短信</a>
+                            <a href="#" class="btn btn-default">通话</a>
+                        </div>
+                        <ul class="idx-work-ranking js-flow-top"></ul>
+                        <ul class="idx-work-ranking js-msg-top"></ul>
+                        <ul class="idx-work-ranking js-voice-top"></ul>
+                        <ul class="idx-work-ranking js-ranking-template" style="display: none">
+                            <li class="item">
+                                <div class="item-ranking"></div>
+                                <div class="item-cont">
+                                    <div class="item-work-num"></div>
+                                </div>
+                                <div class="item-number"></div>
+                            </li>
+                        </ul>
+                        <div style="display: none">
+                            <div class="text-center js-no-data">
+                                <img src="frm/template/images/no-data.png" alt="" style="margin-top: 70px">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- idx-msg-box end -->
+                </div>
+            </div>
+            <!-- panel end -->
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <span class="panel-title">异动告警</span>
+                    <div class="pull-right">
+                        <a href="#" class="text-primary js-more-unusual-info">更多</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="idx-msg-box">
+                        <ul class="idx-changes-warn js-changes-warn">
+                        </ul>
+                        <ul class="idx-changes-warn js-changes-warn-template" style="display: none;">
+                            <li class="warn-item">
+                                <div class="warn-item-container">
+                                    <div class="warn-item-main">
+                                        <div class="warn-item-tit js-warn-title"></div>
+                                        <div class="warn-item-cont js-warn-content"></div>
+                                    </div>
+                                </div>
+                                <a class="warn-item-num js-warn-num" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- panel end -->
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <span class="panel-title">订购列表</span>
+                    <!-- <div class="pull-right">
+                        <a href="#" class="text-primary js-more-info">更多</a>
+                        订购列表没有更多
+                    </div> -->
+                </div>
+                <div class="panel-body">
+                    <div class="idx-msg-box">
+                        <ul class="idx-order-list js-order-list">
+                        </ul>
+                        <ul class="idx-order-list js-order-list-template" style="display: none">
+                            <li class="order-item">
+                                <span class="order-date pull-right"></span>
+                                <a href="#" class="order-link"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- panel end -->
+        </div>
+    </div>
+</div>

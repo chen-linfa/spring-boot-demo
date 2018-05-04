@@ -1,0 +1,70 @@
+<div class="iot-loaction-bar">
+    当前位置：
+    <a href="#" class="link-text"></a>业务查询></a>
+    <a class="current">终端分布</a>
+
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}"> 
+                <div class="form-group">
+                    <label for="" class="control-label" >开始时间：</label>
+                    <div class="input-group  margin-lg-right">
+                        <input type="text" class="form-control js-date" placeholder="-选择时间-" id="start_time">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="control-label">结束时间：</label>
+                    <div class="input-group  margin-lg-right">
+                        <input type="text" class="form-control js-date" placeholder=" -选择时间- " id="end_time">
+                    </div>
+                </div>
+                <div class="form-group fr">
+                    <button class="btn btn-primary" type="button" id="btn_search">查询</button>
+                </div>
+                <div class="form-group fr">
+                    <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text" class="form-control margin-lg-right" placeholder="请输入MSISDN(卡号)" id="msisdn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel panle-default">
+        <div class="mess-rec-bar">
+            <form class="form-inline clearfix">
+                <div class="form-group fr">
+                    <button class="btn btn-default" type="button" name="export_btn"><i class="ico-download margin-sm-right"></i>下载终端分布清单</button>
+                    <button class="btn btn-default" type="button" name="load_template_btn"><i class="ico-download margin-sm-right"></i>下载号码模板</button>
+                    <label class="btn btn-default" for="device_spread_file"><i class="ico-upload margin-sm-right" ></i>上传号码下载终端分布清单</label>
+                </div>
+            </form>
+            <input type="file" id="device_spread_file" style="visibility:hidden;height:0px;">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <table class="table table-striped js-terminal-table"></table>
+        <table class="table table-striped" style="display: none">
+            <tbody>
+                <tr>
+                    <td>13139362607</td>
+                    <td class="text-omit">状态状态状态</td>
+                    <td>2017-04-10</td>
+                    <td>18508053246</td>
+                    <td class="text-weaker-color">2017-08-11</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer clearfix">
+        <div class="page-foot-data">
+            <span>共<span class="page-total-num js-page">0</span>页</span>
+            <span><span class="page-data-count js-count">0</span>条数据</span>
+        </div>
+        <div class="page-foot-form">
+            <div class="input-group col-md-14">
+                <div id="pagination-demo" class="js-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

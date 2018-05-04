@@ -1,0 +1,96 @@
+
+//重写listgroup
+.list-group-item {
+  padding: @panel-body-padding;
+}
+
+// reset
+:focus{
+    outline:0;
+}
+// tool class
+.clear-white{
+    font-size:0;
+}
+//带图标的input失效状态的处理
+.form-control ~ .input-group-addon {
+  border-left: 0;
+  cursor: pointer;
+}
+
+.form-control[disabled] {
+  ~ .input-group-addon {
+    cursor: @cursor-disabled;
+    background-color: @input-bg-disabled;
+    > .glyphicon,
+    > .caret {
+      color: @disabled-text-color;
+    }
+  }
+}
+
+// form required //.form-group
+.required {
+  > label:after {
+    content: "*";
+    color: red;
+    padding-left: (@grid-gutter-width / 10) + 1;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+//针对上传控件图片的处理
+.input-group-addon.webuploader-container .webuploader-pick {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-bottom: -2px;
+    height: @input-height-base - 2 ;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    font-size: @font-size-base;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    background-color: @input-group-addon-bg;
+    border-radius: 0;
+}
+
+
+
+.radio-inline,
+.checkbox-inline {
+  height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    .size( (@input-height-base / 2 ), (@input-height-base / 2 ));
+    margin-top: 2px;
+  }
+}
+
+//alert
+.ui-alert-affix {
+  position: fixed;
+  top:0;
+  z-index: 999999;
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm * 0.8;
+    margin: 5px 0 0 (@container-sm * -0.4);
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md * 0.8;
+    margin: 5px 0 0 (@container-md * -0.4);
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg * 0.8;
+    margin: 5px 0 0 (@container-lg * -0.4);
+  }
+  left: 50%;
+}
+
+//去除IE10 input框close和eye
+::-ms-clear{display:none;}
+::-ms-reveal{display:none;}

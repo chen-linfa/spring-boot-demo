@@ -1,0 +1,81 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">修改套餐</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix" style="height:300px;overflow-y:auto">
+    <form action="">
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>套餐名称<span class="text-danger">*</span>：</label>
+                            <input type="text" id="tc_detail_name" class="form-control" style="width:347px;" name="prod_name" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                    
+                        <div class="form-group">
+                            <label>套餐开始时间<span class="text-danger">*</span>：
+                            </label>
+<!--                             <input type="text" class="form-control" name="eff_time" id="eff_time" disabled>
+ -->                        </div>
+                    <!-- <form class="form-inline">
+                    <div class="form-group">
+                    		<div class="input-group margin-lg-right">
+                            <input type="text" class="form-control" name="eff_time" id="eff_time" style="width:160px;" disabled>
+                        </div>
+                        </div>
+                    </form> -->
+                    <div class="input-group margin-lg-right">
+                            <input type="text" class="form-control" name="eff_time" id="eff_time" style="width:160px;" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>套餐结束时间<span class="text-danger">*</span>：</label>
+<!--                             <input type="text" class="form-control" name="exp_time" id="exp_time" disabled>
+ -->                        </div>
+                        <!-- <form class="form-inline">
+                        <div class="form-group">
+                        	<div class="input-group margin-lg-right">
+                            <input type="text" class="form-control" name="exp_time" id="exp_time" style="width:160px;" disabled>
+                        	</div>
+                        </div>
+                        </form> -->
+                        <div class="input-group margin-lg-right">
+                            <input type="text" class="form-control" name="exp_time" id="exp_time" style="width:160px;" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:15px;">
+            <div class="col-xs-12" id="tc_attr_div" style="display:none;">
+                <div class="form-group no-margin-bottom">
+                    <label>套餐属性<span class="text-danger">*</span>：</label>
+                    <!-- <textarea class="form-control" rows="8" name="comments"></textarea> -->
+                </div>
+                <div class="search-result">
+	                            <ul id="prod_list">
+	                            </ul>
+	            </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer clearfix">
+    <div class="form-group no-margin-bottom fr">
+    	<button class="btn btn-primary" id="btn_edit_attr" type="button">编辑</button>
+        <button class="btn btn-primary" id="btn_submit" type="button" style="display:none;">确定</button>
+        <button class="btn btn-default" data-dismiss="modal" type="button" id="btn_cancel">取消</button>
+    </div>
+</div>

@@ -1,0 +1,161 @@
+.tabs-active(@placement) when (@placement = left){
+  a {
+    &,
+    &:hover,
+    &:focus {
+      width: @tabs-vertical-width - @nav-tabs-link-margin-left;
+      margin-right: -1px;
+      margin-bottom: 0;
+      border: 1px solid;
+      border-color: @tabs-border-left-active-link-hover-border-color;
+    }
+  }
+}
+.tabs-active(@placement) when (@placement = right){
+  a {
+    &,
+    &:hover,
+    &:focus {
+      width: @tabs-vertical-width - @nav-tabs-link-margin-left - 1;
+      margin-left: -1px;
+      margin-bottom: 0;
+      border: 1px solid;
+      border-color: @tabs-border-right-active-link-hover-border-color;
+    }
+  }
+}
+.tabs-active(@placement) when (@placement = bottom){
+  a {
+    &,
+    &:hover,
+    &:focus {
+      margin-top: -1px;
+      margin-bottom: 0;
+      border: 1px solid;
+      border-color: @tabs-border-bottom-active-link-hover-border-color;
+    }
+  }
+}
+.tabs-default(@placement) when (@placement = left){
+  margin-left: @nav-tabs-link-margin-left;
+  margin-right: 0;
+  a {
+    width: @tabs-vertical-width - @nav-tabs-link-margin-left - 1;
+    border: 1px solid transparent;
+    border-right:0;
+    &:hover,
+    &:focus {
+      border: 1px solid;
+      border-color: @tabs-border-left-link-hover-border-color;
+      border-right:0;
+    }
+  }
+}
+.tabs-default(@placement) when (@placement = right){
+  margin-left: 0;
+  margin-right: @nav-tabs-link-margin-left;
+  a {
+    width: @tabs-vertical-width - @nav-tabs-link-margin-left - 1;
+    border: 1px solid transparent;
+    border-left: 0;
+    &:hover,
+    &:focus {
+      border: 1px solid;
+      border-color: @tabs-border-right-link-hover-border-color;
+      border-left: 0;
+    }
+  }
+}
+.tabs-default(@placement) when (@placement = bottom){
+  a {
+    border: 1px solid transparent;
+    border-top: 0;
+    &:hover,
+    &:focus {
+      border: 1px solid;
+      border-color: @tabs-border-bottom-link-hover-border-color;
+      border-top: 0;
+    }
+  }
+}
+.nav-border(@placement) when (@placement = left) {
+    border-right: 1px solid @nav-tabs-border-color;
+}
+.nav-border(@placement) when (@placement = right) {
+    border-left: 1px solid @nav-tabs-border-color;
+}
+.tabs-nav(@placement) when (@placement = left),(@placement = right){
+    float: @placement;
+    width: @tabs-vertical-width;
+    border-bottom: 0;
+    .nav-border(@placement);
+    li {
+      float: none;
+    }
+}
+.tabs-nav(@placement) when (@placement = bottom) {
+    padding: 0 0 4px 0;
+    line-height: 1;
+    border-bottom: 0;
+    border-top: 1px solid @nav-tabs-border-color;
+}
+.tabs-self-adaption(@placement) when (@placement = left),(@placement = right){
+  overflow: hidden;
+  > ul.ui-tabs-nav {
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+  }
+  > .ui-tabs-panel {
+    overflow: hidden;
+  }
+}
+.tabs-position(@placement){
+  .clearfix();
+  > ul.ui-tabs-nav {
+    .tabs-nav(@placement);
+    li{
+      &.ui-state-default.ui-tabs-active {
+      	.tabs-active(@placement);
+      }
+      &.ui-state-default {
+        .tabs-default(@placement);
+      }
+      a{
+        float: none;
+        display: inline-block;
+        margin-bottom: 0;
+        .text-overflow(ellipsis);
+      }
+    }
+  }
+  .tabs-self-adaption(@placement);
+}
+.tabs-max-width(@set-max-width) when (@set-max-width = true){
+  .ui-tabs .ui-tabs-nav {
+    li {
+      &.ui-state-default a {
+        max-width: @nav-tabs-link-max-width;
+        .text-overflow(ellipsis);
+      }
+      a:hover,
+      a:focus {
+        .ui-tabs-close {
+          color: @nav-tabs-link-hover-close-color;
+        }
+      }
+      &.ui-tabs-active > a {
+        &,
+        &:hover,
+        &:focus {
+          .ui-tabs-close {
+            color: @nav-tabs-link-close-color;
+          }
+        }
+      }
+    }
+    .ui-tabs-close {
+      position: absolute;
+      right: 6px;
+    }
+  }
+}

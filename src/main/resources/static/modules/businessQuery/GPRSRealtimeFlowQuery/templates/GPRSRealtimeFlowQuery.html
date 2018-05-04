@@ -1,0 +1,48 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务查询></a><a class="current">GPRS实时流量查询</a>
+</div>
+<div class="panel">
+    <div class="panel-control-bar">
+        <form action="" class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+            <div class="form-group">
+                <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text" id="search_content" class="form-control" placeholder="请输入卡号">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary js-search" type="button">查询</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="panel js-detail" style="display: none">
+    <div class="panel-heading">
+        <div class="fwb f12">用户流量详情（如果该物联卡在流量池中查询结果为流量池信息）</div>
+    </div>
+    <div class="panel-body">
+        <ul class="gprs-user-flow clearfix">
+            <li>
+                <div class="fwb">通话分钟数</div>
+                <div>
+                    <div class="f18 text-brand-primary js-voice"></div>
+                    <!-- <div class="js-progressbar1 margin-lg-top"></div> -->
+                </div>
+            </li>
+                        <li>
+                <div class="fwb">使用短信数</div>
+                <div>
+                    <div class="f18 text-brand-primary js-message"></div>
+                    <!-- <div class="js-progressbar1 margin-lg-top"></div> -->
+                </div>
+            </li>
+                        <li>
+                <div class="fwb">流量数</div>
+                <div>
+                    <div class="f18 text-brand-primary js-flow"></div>
+                    <!-- <div class="js-progressbar1 margin-lg-top"></div> -->
+                </div>
+            </li>
+           
+        </ul>
+    </div>
+</div>
+<div class="js-error" style="display: none;"></div>

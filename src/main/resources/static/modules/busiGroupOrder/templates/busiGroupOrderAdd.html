@@ -1,0 +1,263 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务订购></a><a class="current">订购组添加套餐</a>
+</div>
+<div class="group_list_div">
+	<div class="panel">
+	    <div class="panel-select-bar">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选订购组</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">2</span>
+	                    <span class="text-weaker-color">选套餐</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">3</span>
+	                    <span class="text-weaker-color">确认提交</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	
+	</div>
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	                <div class="form-group">
+	                	 <input id="name" type="text" class="form-control" placeholder="请输入订购组名称">
+	                </div>
+	                <div class="form-group">
+		                <button class="btn btn-primary" type="button" id="btn_search_3">搜索</button>
+		            </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel panel-default">
+	        <table class="table table-striped" id="form_table">
+	            
+	        </table>
+	    </div>
+	   <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num">0</span>页</span>
+	            <span><span class="page-data-count">0</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group col-md-14">
+	                <div id="pagination-demo" class="js-pagination"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+<!-- 选套餐 start -->
+<div class="group_detail_div" style="display: none;">
+	<div class="panel">
+	    <div class="panel-select-bar">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选订购组</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">2</span>
+	                    <span class="text-weaker-color">选套餐</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">3</span>
+	                    <span class="text-weaker-color">确认提交</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	
+	</div>
+	<div class="iot-panel-group">
+	    <div class="col-xs-6">
+	        <div class="row">
+	            <div class="panel">
+	
+	                <div class="select-meal-box">
+	                    <div class="meal-box-inner">
+<!-- 	                        <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}"> -->
+<!-- 	                            <div class="form-group"> -->
+<!-- 	                                <input id="prod_name" type="text" class="form-control" placeholder="请输入套餐名称"> -->
+<!-- 	                            </div> -->
+<!-- 	                            <div class="form-group"> -->
+<!-- 	                                <button class="btn btn-primary" type="button" id="btn_search">搜索</button> -->
+<!-- 	                            </div> -->
+<!-- 	                        </form> -->
+	                        <div class="search-result">
+	                            <ul id="prod_list">
+	                            </ul>
+	                        </div>
+	                    </div>
+	
+	                </div>
+	                <div class="padding-md submit-bar">
+	                    <div class="form-group">
+	                        <button class="btn btn-primary" type="button" id="submit">提交</button>
+	                        <button class="btn btn-default backToMain" type="button">上一步</button>
+	                    </div>
+	                </div>
+	            </div>
+	
+	        </div>
+	    </div>
+	    <div class="col-xs-6">
+	        <div class="row">
+	            <div class="panel">
+	                <div class="had-select">
+	                    <div class="select-inner"  style="overflow: auto;">
+	                        <div class="panel-heading clearfix">
+	                            <div class="panel-title fl">已选套餐</div>
+	                            <button class="fr vacum-up cleanAll">清空</button>
+	                        </div>
+	                         <div class="search-result">
+		                        <ul id = "choosed_list">
+		                        </ul>
+	                        </div>
+	                    </div>
+	
+	                </div>
+	                <div class="submit-bar"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+<!-- 选套餐 start -->
+
+<!-- 提交 start -->
+<div class="group_submit_div" style="display: none;">
+	<div class="panel toDetail">
+	    <div class="panel-select-bar">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选订购组</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">2</span>
+	                    <span class="text-brand-primary">选套餐</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">3</span>
+	                    <span class="text-brand-primary">确认提交</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	
+	</div>
+	<div class="panel">
+	    <div class="order-finish">
+	        <div class="margin-md-btm"><img src="frm/template/images/successs.png" alt=""></div>
+	        <div class="text-finish">订单创建成功</div>
+	        <div class="text-finish">本次订购了<span id="prod_num"></span>个套餐。已生成订单号：<span id="order_id"></span></div>
+	        <ul class="order-list" id="add_list">
+	        </ul>
+	        <div class="margin-lg-top"><a href="javascript:void(0);" class="margin-lg-right continue_add">继续添加套餐</a><a href="#" class="queryDetail">查看订单详情</a></div>
+	    </div>
+	</div>
+</div>
+<!-- 提交 end -->
+<!-- 订购关系 start -->
+<div class="group_rel_div" style="display:none">
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	                <div class="form-group">
+	                   <input type="text" class="form-control" placeholder="请输入成员卡号" id="search_input">
+	                </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button" id="btn_search_1">查询</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel panel-default">
+	        <table class="table table-striped" id="form_table_1">
+	            
+	        </table>
+	    </div>
+	    <div class="panel-footer clearfix">
+	        <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num_1">0</span>页</span>
+	            <span><span class="page-data-count_1">0</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group col-md-14">
+	                <div id="pagination-demo" class="js-pagination_1"></div>
+	            </div>
+	        </div>
+	    </div>
+	    </div>
+	</div>
+</div>
+<!-- 订购关系 end -->
+
+<!-- 已订购套餐查询 start -->
+<div class="group_prod_div" style="display:none">
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	                <div class="form-group">
+	                   <input type="text" class="form-control" placeholder="产品编码" id="search_input_id">
+	                </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button" id="btn_search_2">查询</button>
+	                    <button class="btn btn-primary" type="button" id="refresh">刷新</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel panel-default">
+	        <table class="table table-striped" id="form_table_2">
+	            
+	        </table>
+	    </div>
+	    <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num_2">0</span>页</span>
+	            <span><span class="page-data-count_2">0</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group col-md-14">
+	                <div id="pagination-demo" class="js-pagination_2"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+<!-- 已订购套餐查询 end -->

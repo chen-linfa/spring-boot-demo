@@ -1,0 +1,145 @@
+@bootstrap-switch-base: ui-switch;
+
+.@{bootstrap-switch-base} {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid @btn-default-border;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  .user-select(none);
+  vertical-align: middle;
+  line-height: normal;
+
+  &.@{bootstrap-switch-base}-animate {
+
+    .@{bootstrap-switch-base}-container {
+      .transition(margin-left 0.5s);
+    }
+  }
+
+  &.@{bootstrap-switch-base}-on {
+
+    .@{bootstrap-switch-base}-container {
+      margin-left: 0;
+    }
+  }
+
+  &.@{bootstrap-switch-base}-off {
+
+    .@{bootstrap-switch-base}-container {
+      margin-left: -50%;
+    }
+  }
+
+  &.@{bootstrap-switch-base}-disabled,
+  &.@{bootstrap-switch-base}-readonly {
+    // .opacity(.5);
+    cursor: default;
+    .@{bootstrap-switch-base}-handle-on,
+    .@{bootstrap-switch-base}-handle-off,
+    .@{bootstrap-switch-base}-label {
+      cursor: default;
+    }
+    .@{bootstrap-switch-base}-handle-on.@{bootstrap-switch-base}-primary{
+        color: @gray-base;
+        background: @gray-lighter;
+    }
+  }
+
+  &.@{bootstrap-switch-base}-focused {
+    .focus();
+  }
+
+  .@{bootstrap-switch-base}-container {
+    display: inline-block;
+    width: 150%;
+    top: 0;
+    .translate3d(0, 0, 0);
+    line-height: normal;
+  }
+
+  .@{bootstrap-switch-base}-handle-on,
+  .@{bootstrap-switch-base}-handle-off,
+  .@{bootstrap-switch-base}-label {
+    .box-sizing(border-box);
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    padding: @switchbutton-label-padding;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+  }
+
+  .@{bootstrap-switch-base}-handle-on,
+  .@{bootstrap-switch-base}-handle-off {
+    text-align: center;
+    z-index: 1;
+    width: 33.333333333%;
+
+    &.@{bootstrap-switch-base}-primary {
+      color: @component-base-color;
+      background: @btn-primary-bg;
+    }
+
+    &.@{bootstrap-switch-base}-info {
+      color: @component-base-color;
+      background: @btn-info-bg;
+    }
+
+    &.@{bootstrap-switch-base}-success {
+      color: @component-base-color;
+      background: @btn-success-bg;
+    }
+
+    &.@{bootstrap-switch-base}-warning {
+      background: @btn-warning-bg;
+      color: @component-base-color;
+    }
+
+    &.@{bootstrap-switch-base}-danger {
+      color: @component-base-color;
+      background: @btn-danger-bg;
+    }
+
+    &.@{bootstrap-switch-base}-default {
+      color: @gray-base;
+      background: @gray-lighter;
+    }
+  }
+
+  .@{bootstrap-switch-base}-label {
+    text-align: center;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    z-index: 100;
+    width: 33.333333333%;
+    color: @btn-default-color;
+    background: @btn-default-bg;
+  }
+
+  input[type='radio'],
+  input[type='checkbox'] {
+    &:extend(.switch-btn all);
+  }
+  &.@{bootstrap-switch-base}-lg {
+    .switchbutton-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large);
+  }
+  &.@{bootstrap-switch-base}-sm {
+    .switchbutton-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small);
+  }
+  &.@{bootstrap-switch-base}-xs {
+    .switchbutton-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small);
+  }
+}
+.switch-btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  .opacity(0);
+  z-index: -1;
+
+  &.form-control {
+    height: auto;
+  }
+}

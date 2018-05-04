@@ -1,0 +1,56 @@
+logging:
+    config: classpath:logback.xml
+    path: f:/logs
+
+server:
+    port: 8080
+    session-timeout: 60
+    servlet:
+      context-path: /spring-boot
+
+mybatis:
+    configLocation: classpath:/mybatis/mybatis-config.xml
+
+redis:
+    maxTotal: 100
+    maxIdel: 50
+    maxWaitMillis: 5000
+    testOnBorrow: true
+    testOnReturn: true
+    serverList: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381
+
+quartz:
+    scheduler:
+      instanceName: CnlmScheduler
+
+spring:
+    thymeleaf:
+    prefix: classpath:/templates/
+
+    session:
+      store-type: none
+    redis:
+      cluster:
+        nodes: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381
+
+    datasource:
+        name: db
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://127.0.0.1:3306/spring-demo
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+        minIdle: 5
+        maxActive: 100
+        initialSize: 10
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 50
+        removeAbandoned: true
+        filters: stat

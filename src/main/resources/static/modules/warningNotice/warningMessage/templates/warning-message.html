@@ -1,0 +1,86 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="javascript:void(0);" class="link-text">告警通知></a><span class="current">告警信息</span>
+</div>
+<div class="iot-panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="panel-title">告警信息列表</span>
+        </div>
+    </div>
+    <div class="panel padding-md">
+    	  <div class="panel-control-bar" style="padding-bottom: 0px;" id="d1">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <input type="text" class="form-control margin-lg-right" name="cat_code">
+	                </div>
+<!-- 	                <div class="form-group">
+	                    <label for="" class="control-label">开始时间：</label>
+	                    <div class="input-group  margin-lg-right">
+	                        <input type="text" class="form-control js-start_date" name="start_time" placeholder="">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="" class="control-label">结束时间：</label>
+	                    <div class="input-group  margin-lg-right">
+	                        <input type="text" class="form-control js-end_date" name="end_time" placeholder="">
+	                    </div>
+	                </div> -->
+	                <div class="form-group">
+		                <label for="" class="control-label">查询时间范围</label>
+		                <div class="input-group">
+		                    <input type="text" class="form-control js-start_date" name="start_time" placeholder="">
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <label for="" class="control-label">--</label>
+		                <div class="input-group">
+		                    <input type="text" class="form-control js-end_date" name="end_time" placeholder="">
+		                </div>
+		            </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button" id="btn_search">查询</button>
+	                    <button class="btn btn-primary" type="button" id="btn_export">导出清单列表</button>
+	                </div>
+            </form>
+        </div>
+        <div class="flow-warn">
+            <ul id="warnmsg_list" class="flow-list">
+            <li>暂无数据</li>
+            </ul>
+            <ul style="display: none;">
+                <li id="detail-li" class="list-item">
+                    <span name="trigger_id" id="trigger_id" style="display: none;"></span>
+                    <div class="clearfix margin-md-btm">
+                        <div class="remind-title fl"><span name="cfg_name">告警规则部分</span></div>
+                        <div class="fr hidden">
+                            <a href="javascript:void(0);" class="margin-md-right js-edit_detail">配置</a>
+                            <a href="javascript:void(0);" class="margin-md-right js-delete_detail">停用</a>
+                            <a href="javascript:void(0);" class="js-report_detail">报表</a>
+                        </div>
+                    </div>
+                    <div class="margin-md-btm">
+                        <span class="margin-lg-right">
+                            告警类型：<span class="margin-md-right js-object_desc" name="cat_name"></span>
+                        </span>
+                        <span class="text-weaker-color">预警时间：</span><span class="text-weaker-color" id="create_date" name="create_date"></span>
+                    </div>
+                    <div class="margin-md-btm">
+                        <div class="fwb">告警情况：</div>
+                        <span name="data_content" ></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <div class="panel-footer clearfix">
+        <div class="page-foot-data">
+            <span>共<span class="page-total-num">0</span>页</span>
+            <span><span class="page-data-count">0</span>条数据</span>
+        </div>
+        <div class="page-foot-form">
+            <div class="input-group col-md-14">
+                <div id="pagination-demo" class="js-pagination"></div>
+            </div>
+        </div>
+   		 </div>
+    </div>
+</div>

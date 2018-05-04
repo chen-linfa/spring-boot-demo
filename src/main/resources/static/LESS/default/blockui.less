@@ -1,0 +1,31 @@
+.blockUI.ui-widget-overlay {
+  background-color: @blockUI-backdrop-bg;
+}
+
+.blockUI.blockPage,
+.blockUI.blockElement {
+  top: 40%;
+  left: 50%;
+  background-color: @blockUI-bg-color;
+  border-radius: @blockUI-border-radius;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  > .loading {
+    background: url(@blocUI-img) 0 no-repeat;
+    width: @blockUI-width;
+    height: @blockUI-height;
+    float: @blockUI-img-float;
+    margin-top: 2px;
+  }
+  > .blockUI-content {
+    padding-left: @padding-base-horizontal;
+    font-size: @blockUI-font-size;
+    color: @blockUI-font-color;
+    &.blockUI-iconOnly {
+      padding: 0;
+    }
+  }
+}
+
+.blockUI.blocking {
+  .opacity(0);
+}

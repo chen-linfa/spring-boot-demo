@@ -1,0 +1,30 @@
+.accordion() {
+  .panel {
+    margin-bottom: 0px;
+    &+ .panel {
+      border-top: none;
+    }
+    .panel-heading {
+        cursor: pointer;
+        position: relative;
+        border-bottom : none;
+        a {
+          text-decoration: none;
+        }
+        .@{icon-prefix}{
+          float: left;
+          margin: 0 @caret-width-accordion 0 0;
+        }
+
+    }
+  }
+  &.ui-accordion-disabled {
+    .panel-heading ,
+    .panel-body {
+        background-color: @input-bg-disabled;
+        opacity: 1; 
+        cursor: @cursor-disabled;
+    }
+    
+  }
+}

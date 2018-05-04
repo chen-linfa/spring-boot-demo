@@ -1,0 +1,77 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">成员管理></a><a href="#" class="link-text">成员变更></a><span class="current">选号码</span><a class="fr text-brand-primary js-btn_back" href="javascript:void(0);" >返回上一层</a>
+</div>
+<div class="panel">
+    <div class="panel-select-bar">
+        <ul>
+            <li class="select-item">
+                <a href="#">
+                    <span class="num-circle active">1</span>
+                    <span class="text-brand-primary">选号码</span>
+                </a>
+                <i class="ico-right"></i>
+            </li>
+            <li class="select-item">
+                <a href="#">
+                    <span class="num-circle">2</span>
+                    <span class="text-weaker-color">选套餐</span>
+                </a>
+                <i class="ico-right"></i>
+            </li>
+
+            <li class="select-item">
+                <a href="#">
+                    <span class="num-circle">3</span>
+                    <span class="text-weaker-color">确认提交</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+                <div class="form-group">
+                    <label for="" class="control-lable margin-md-left">筛选号码：</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入筛选号码" id="new_mem_num">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" id="btn_add">添加</button>
+                </div>
+                <div class="form-group fr">
+                
+                    <label class="btn btn-default" type="button" for="new_mem_user_file"><i class="ico-upload margin-sm-right"></i>上传Excel</label>
+                    <button class="btn btn-default" type="button" id="templ_download_btn"><i class="ico-download margin-sm-right"></i>下载模版</button>
+                </div>
+            </form>
+            <input type="file" name="" id="new_mem_user_file" style="visibility:hidden;height:0px;">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-striped" id="addtab">
+            </table>
+        </div>
+	       <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num">0</span>页</span>
+	            <span><span class="page-data-count">0</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group">
+	                <div class="js-pagination"></div>
+	            </div>
+	        </div>
+	    </div>
+        <div class="panel-footer clearfix">
+            <div class="page-foot-data margin-md-left">
+                <button class="btn btn-primary" type="button" id="btn_nextstep">下一步</button>
+                <button class="btn btn-default js-btn_back" type="button">返回</button>
+            </div>
+        </div>
+    </div>
+</div>

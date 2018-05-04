@@ -1,0 +1,26 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务查询></a><a class="current">个人账单信息</a>
+</div>
+
+<div class="iot-layout-panel">
+	<div class="online-row clearfix">
+			<label class="fl" style="height:30px;line-height:30px;">物联网卡号：</label>
+			<input id="msisdn" type="text" style="width:200px;" class="form-control fl" name="msisdn" value="" data-rule="required;msisdn" placeholder="请输入卡号"/>
+			<label class="fl" style="height:30px;line-height:30px;">月份：</label>
+			<div style="width:200px;" class="fl">
+				<input id="month" class="form-control fl" />
+			</div>
+			<input id="btn_qry" type="button" class="btn btn-primary fl" style="margin-left:10px;" value="查询" />
+	</div>
+	<div class="js-error" style="display: none;margin-top: 20px;"></div>
+    <div class="online-row clearfix" style="margin-top:15px;visibility:hidden;;" >
+    	<div class="well">
+    	</div>
+    	<div id="bill_grid" ></div>
+    	<div class="panel-body">
+        	<div class="idx-chart-box js-chart-xy col-xs-6"></div>
+        	<div class="idx-chart-box js-chart-cycle col-xs-6"></div>
+        </div>
+    	
+    </div>
+</div>

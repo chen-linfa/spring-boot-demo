@@ -1,0 +1,143 @@
+ // Slider 
+
+.slick-slider {
+    position: relative;
+    display: block;
+    margin-bottom: @slick-slider-margin;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    .clearfix();
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+ // Arrows 
+.slick-prev,
+.slick-next
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+
+    width: @slick-button-width;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+
+    color: @slick-button-color;
+    border: 0;
+    outline: none;
+    background-color:transparent;
+    font-size: @slick-button-font-size;
+    &:hover,&:focus{
+        color: @gray-dark;
+    }
+}
+
+.slick-prev,[dir='rtl'] .slick-next{
+    left: 0;
+    right: auto;
+}
+.slick-next,[dir='rtl'] .slick-prev{
+    right: 0;
+    left: auto;
+}
+
+ // Dots
+
+.slick-dots{
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    bottom: -(@slick-slider-margin + 15);
+    li{
+        position: relative;
+        display: inline-block;
+        margin:  @slick-dots-margin;
+        button{
+            line-height: 0;
+            display: block;
+            width:  @slick-dots-width;
+            height:  @slick-dots-height;
+
+            border: 0;
+            border-radius:  @slick-dots-border-radius;
+            outline: none;
+            background-color: @gray-base;
+            .opacity(.25);
+            &:hover,&:focus{
+                 outline: none;
+                 .opacity(1);
+            }
+        }
+        &.slick-active button{
+            .opacity(.75);
+        }
+    }
+    
+}

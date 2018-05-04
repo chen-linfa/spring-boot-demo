@@ -1,0 +1,14 @@
+// -----------------input-groups-----------------------
+.input-group {
+  &.input-group-sm {
+    .form-control-feedback {
+      width: @input-height-small;
+      height: @input-height-small;
+      line-height: (@input-height-small - 3);
+    }
+    .input-group-addon > span {
+      //have a height problem with display:inline-block on chrome browser
+      display: block;
+    }
+  }
+}

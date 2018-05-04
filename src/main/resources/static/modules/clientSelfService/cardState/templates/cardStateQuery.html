@@ -1,0 +1,42 @@
+<div class="iot-loaction-bar">
+       当前位置：
+    <a href="#" class="link-text"></a>客户自助服务></a>
+    <a class="current">GPRS状态查询</a>
+</div>
+<div class="main_list_div">
+	<div class="iot-panel-group">
+	    <div class="panel"> 
+	        <div class="panel-control-bar">
+	            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	                <div class="form-group">
+	                    <div class="input-group">
+	                        <input type="text" class="form-control" id="search_input" placeholder="请输入卡号" name="misidn_num" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button"  id="query_gprs">查询</button>
+	                </div>
+	                <div class="form-group fr">
+	                    <button class="btn btn-default" type="button" name="batch_gprs_temp"><i class="ico-download margin-sm-right"></i>下载批量查询模板</button>
+	                    <label class="btn btn-default" for="gprs_file"><i class="ico-upload margin-sm-right" ></i>上传批量查询</label>
+	                </div>
+	            </form>
+	            <input type="file" id="gprs_file" style="visibility:hidden;height:0px;">
+	        </div>
+	    </div>
+	    <div class="panel panel-default">
+	        <table class="table table-striped" id="myTable"></table>
+	    </div>
+	    <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num">0</span>页</span>
+	            <span><span class="page-data-count">0</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group col-md-14">
+	                <div id="pagination-demo" class="js-pagination"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>

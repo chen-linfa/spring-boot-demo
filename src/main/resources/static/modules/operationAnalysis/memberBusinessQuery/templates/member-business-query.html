@@ -1,0 +1,55 @@
+<div class="iot-loaction-bar">
+    当前位置：<span>运营分析</span> > <span class="current">成员业务量查询</span>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-horizontal" id="query_form">
+                <div class="row">
+                    <div class="col-xs-2">
+                         <div class="form-group">
+                            <input type="text" class="form-control" id="msisdn" name="msisdn" placeholder="请输入MSISDN">  
+                        </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                     <label for="" class="control-label">查询时间范围</label>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control js-start_date" name="start_time" placeholder="开始时间">
+                                        <span class="input-group-addon">
+                                        至
+                                        </span>
+                                         <input type="text" class="form-control js-end_date" name="end_time" placeholder="结束时间">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <div class="form-group fr">
+                            <button class="btn btn-primary" type="button" id="btn_query">查询</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel panle-default">
+        <div class="mess-rec-bar">
+            <form class="form-inline clearfix">
+                <div class="form-group">
+                     <button class="btn btn-default" type="button" id="btn_download"><i class="ico-download margin-sm-right"></i>下载号码模板</button>
+                     <label class="btn btn-default" type="button" for="mem_busi_info_file"><i class="ico-upload margin-sm-right"></i>上传号码批量查询</label>
+                </div>
+            </form>
+        </div>
+        <input type="file" id="mem_busi_info_file" style="visibility:hidden;height:0px;">
+    </div>
+    <div class="panel panel-default">
+         <table class="table table-striped m-num-m-table" id="xtab"></table>
+    </div>
+</div>

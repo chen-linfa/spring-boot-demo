@@ -1,0 +1,47 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务规则配置化></a><span class="current">流量预警</span>
+</div>
+<div class="iot-panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="panel-title">流量预警配置列表</span>
+            <div class="form-group fr">
+                <button class="btn btn-default pull-right" type="button" id="trigger_add_btn"><i class="ico-add-two "></i>添加</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel padding-md">
+        <div class="flow-warn">
+            <ul id="data_list" class="flow-list"></ul>
+            <ul style="display: none;">
+                <li id="detail-li">
+                    <span name="trigger_id" id="trigger_id" style="display: none;"></span>
+                    <div class="clearfix margin-md-btm">
+                        <div class="remind-title fl"><span name="trigger_name" id="trigger_name">号码流量实时提醒（480MB）</span></div>
+                        <div class="fr">
+                            <a href="#" class="margin-md-right js-edit_detail">配置</a>
+                            <a href="#" class="margin-md-right js-delete_detail">停用</a>
+                            <a href="#" class="js-report_detail">报表</a>
+                        </div>
+                    </div>
+                    <div class="margin-md-btm">
+                        <span class="margin-lg-right">
+                            号码数（个）：<a href="#" class="margin-md-right js-object_desc" id="object_desc" name="object_desc">0</a>
+                        </span>
+                        <span class="text-weaker-color">创建时间：</span><span class="text-weaker-color" id="create_date" name="create_date"></span>
+                    </div>
+                    <div class="margin-md-btm">
+                        <div class="fwb">配置描述：</div>
+                        <span name="trigger_desc" id="trigger_desc"></span>
+                        <!-- <ul class="describe-list" id="trigger_desc">
+                            <li>(1)平台web页面显示告警信息。<br/>
+                            (2)以API形式推送您的应用（需要开通并配置）。<br/>
+                            (3)号码自动暂停GPRS功能。<a href="#">展开></a></li>
+                        </ul> -->
+                    </div>
+                </li>
+            </ul>
+             <!-- <div class="load-more">剩余2316条，<a href="#" class="text-brand-primary">加载更多></a></div> -->
+        </div>
+    </div>
+</div>

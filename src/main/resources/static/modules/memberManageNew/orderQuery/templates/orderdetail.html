@@ -1,0 +1,45 @@
+<div>
+	<div class="iot-loaction-bar">
+	    当前位置：<a href="#" class="link-text">业务订购></a><a class="current">订单查询</a>
+	</div>
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <input type="text" class="form-control" placeholder="请输入MSISDN卡号" id="search_input">
+	                </div>
+	                <div class="form-group">
+	                    <label for="" class="control-label">状态：</label>
+	                    <div class="input-group  margin-lg-right">
+	                        <input type="text" class="form-control js-order_detail_status" placeholder="">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button" id="btn_search">查询</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel panel-default">
+	        <table class="table table-striped m-num-m-table" id="detailtab">
+	        </table>
+	    </div>
+	    <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num">0</span>页</span>
+	            <span><span class="page-data-count">0</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group">
+	                <div id="pagination-demo" class="js-pagination"></div>
+	            </div>
+	        </div>
+	    </div>
+	     <div class="panel-footer clearfix">
+	         <div class="page-foot-data margin-md-left">
+	             <button class="btn btn-default js-btn_back" type="button">返回</button>
+	         </div>
+	     </div>
+	</div>
+</div>

@@ -1,0 +1,70 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务订购></a><a class="current">订购组订单查询</a>
+</div>
+<div class="main_list_div">
+	<div class="iot-panel-group">
+	    <div class="panel"> 
+	        <div class="panel-control-bar">
+	            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	            	<div class="form-group">
+		                <label for="" class="control-label">查询时间范围</label>
+		                <div class="input-group">
+		                    <input type="text" class="form-control js-date" id="start_date">
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <label for="" class="control-label">--</label>
+		                <div class="input-group">
+		                    <input type="text" class="form-control js-date" id="end_date">
+		                </div>
+		            </div>
+	                <div class="form-group">
+	                    <div class="input-group">
+	                        <input type="text" class="form-control" id="search_input" placeholder="请输入订单号">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button" id="query">查询</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel panel-default">
+	        <table class="table table-striped" id="myTable"></table>
+	    </div>
+	    <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num">2</span>页</span>
+	            <span><span class="page-data-count">23</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group col-md-14">
+	                <div id="pagination-demo" class="js-pagination"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+<!-- 详情 start -->
+<div class="detail_div" style="display: none;">
+	<div class="panel">
+	<div class="panel-control-bar">
+	    <form class="form-inline">
+	        <div class="form-group margin-lg-right">
+		       <input id="prod_name" type="text" class="form-control" placeholder="请输入套餐名称">
+	        </div>
+	        <div class="form-group">
+	        	<button class="btn btn-primary" type="button" id="seach_btn">查询</button>
+	        </div>
+	    </form>
+	</div>
+	<div class="divide-line"></div>
+	<div class="padding-md">
+		<div class="block-divide-wrap">
+			<ul class="block-divide-list">
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<!-- 详情 end -->

@@ -1,0 +1,72 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">修改告警配置</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <form action="">
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>配置名称<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" placeholder="配置名称～" id="warn_config_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>业务类型<span class="text-danger">*</span>：</label>
+                            <div id="add_men_type"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>限制类型<span class="text-danger">*</span>：</label>
+                            <div id="add_restrict_type"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>限制值<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" placeholder="限制值～" id="restrict_value">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>值单位<span class="text-danger">*</span>：</label>
+                            <div id="add_unit"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>状态<span class="text-danger">*</span>：</label>
+                            <div id="add_status_cd"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group no-margin-bottom">
+                        <label>备注：</label>
+                        <textarea class="form-control" rows="4" placeholder="输入信息"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="form-group no-margin-bottom">
+        <button class="btn btn-primary" type="button" id="submit_btn">确定</button>
+         <button class="btn btn-default" type="button" id="cancel_btn">取消</button>
+    </div>
+</div>

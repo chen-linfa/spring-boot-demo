@@ -1,0 +1,84 @@
+<div class="wrap"
+	style="background-color: white; height: 100%; width: 100%; padding-top: 20px;">
+	<div class="header">
+		<a class="brand" href="#" style="margin-left: 20px; margin-top: 30px;">
+			<img class="logo" src="images/logo.png"
+			style="width: 300px; height: 60px;" alt=""> <span
+			style="font-size: 20px; margin-left: 20px;">宁夏移动物联网tomcat管理平台</span>
+		</a>
+		<div>
+			<a href="https://211.136.110.102:8084/iotportal"
+				style="position: absolute; top: 40px; right: 80px; height: 30px;font-style: italic;text-decoration:underline">请确保所有的tomcat开启。链接门户>>>>></a>
+		</div>
+		<nav class="navbar horizontal-menu  navbar-minimal"
+			style="width: 100%">
+			<div class="navbar-inner">
+				<div class="navbar">
+					<ul class="navbar-nav" id="menu_ul">
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="iot-panel-group" style="width: 100%;">
+		<div class=" panel-default">
+			<!-- <table id="data_list" class="table table-striped" style="width:1000px;text-align:center;vertical-align: middle;"></table> -->
+			<center>
+				<table id="data_list"
+					class="table table-striped dataTable no-footer"
+					style="width: 1000px; text-align: center; display: table-cell; border: 1px solid #555;"
+					role="grid">
+					<thead>
+						<tr role="row">
+							<th class="sorting_disabled" rowspan="2" colspan="1"
+								style="width: 10%; text-align: center;">编号</th>
+							<th class="sorting_disabled" rowspan="2" colspan="1"
+								style="width: 10%; text-align: center;">编号</th>
+							<th class="sorting_disabled" rowspan="1" colspan="1"
+								style="width: 10%; text-align: center;">Tomcat名称</th>
+							<th class="sorting_disabled" rowspan="1" colspan="1"
+								style="width: 10%; text-align: center;">所在Linux地址</th>
+							<th class="sorting_disabled" rowspan="1" colspan="1"
+								style="width: 10%; text-align: center;">Tomcat别名</th>
+							<th class="sorting_disabled" rowspan="1" colspan="1"
+								style="width: 10%; text-align: center;">Tomcat现在的状态</th>
+							<th class="sorting_disabled" rowspan="1" colspan="1"
+								style="width: 10%; text-align: center;">修改状态</th>
+						</tr>
+					</thead>
+					<tbody id="tomcat_tbody">
+						<!-- <tr id="1" role="row" class="temp" id="tr_template"
+							style="display: none;">
+							<td name="" style="width: 10px;"><input type="checkbox"
+								class="cbr"></td>
+							<td name="" style="width: 10px;">1</td>
+							<td name="" style="width: 10px;"></td>
+							<td name="" style="width: 10px;">测试主机001</td>
+							<td name="" style="width: 10px;"></td>
+							<td name="" style="width: 10px;"></td>
+							<td name="" style="width: 80px;"></td>
+						</tr> -->
+					</tbody>
+				</table>
+			</center>
+		</div>
+	<div class="block-mt text-center text-primary f16"
+		style="margin-top: 10px;">
+		<button type="button" id="batch_ontomcat"
+			class="btn btn-primary btn-sm">批量暂停</button>
+		<button type="button" id="batch_offtomcat"
+			class="btn btn-primary btn-sm">批量恢复</button>
+		<button type="button" id="batch_flashtomcat"
+			class="btn btn-primary btn-sm">批量刷新</button>
+	</div>
+	</div>
+	<!-- <div class="block-mt text-center text-primary f16"
+		style="margin-top: 10px;">
+		<button type="button" id="batch_ontomcat"
+			class="btn btn-primary btn-sm">批量暂停</button>
+		<button type="button" id="batch_offtomcat"
+			class="btn btn-primary btn-sm">批量恢复</button>
+		<button type="button" id="batch_flashtomcat"
+			class="btn btn-primary btn-sm">批量刷新</button>
+	</div> -->
+</div>

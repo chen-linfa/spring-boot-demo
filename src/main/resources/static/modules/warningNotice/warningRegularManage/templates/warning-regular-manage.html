@@ -1,0 +1,106 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">告警通知></a><span class="current">告警规则管理</span>
+</div>
+<div class="iot-panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="panel-title">告警规则列表</span>
+        </div>
+    </div>
+        <div class="panel padding-md">
+        	<div class="panel-control-bar" style="padding-bottom: 0px;">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <input type="text" class="form-control margin-lg-right" name="cfg_name" placeholder="请输入配置名称">
+	                </div>
+<!-- 	                <div class="form-group">
+	                    <label for="" class="control-label">开始时间：</label>
+	                    <div class="input-group  margin-lg-right">
+	                        <input type="text" class="form-control js-start_date" name="start_time" placeholder="">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="" class="control-label">结束时间：</label>
+	                    <div class="input-group  margin-lg-right">
+	                        <input type="text" class="form-control js-end_date" name="end_time" placeholder="">
+	                    </div>
+	                </div> -->
+	                <div class="form-group">
+		                <label for="" class="control-label">查询时间范围</label>
+		                <div class="input-group">
+		                    <input type="text" class="form-control js-start_date" name="start_time" placeholder="">
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <label for="" class="control-label">--</label>
+		                <div class="input-group">
+		                    <input type="text" class="form-control js-end_date" name="end_time" placeholder="">
+		                </div>
+		            </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button" id="btn_search">查询</button>
+	                </div>
+	            <div class="form-group fr">
+	                <button class="btn btn-default pull-right" type="button" id="btn_add"><i class="ico-add-two "></i>新增配置</button>
+	            </div>
+            </form>
+        </div>
+    
+    <div class="panel padding-md">
+        <div class="flow-warn">
+            <ul id="warnmsg_list" class="flow-list">
+            </ul>
+            <ul style="display: none;">
+                <li class="list-item" id="detail-li">
+                    <span name="cfg_id" style="display: none;"></span>
+                    <div class="clearfix margin-md-btm">
+                        <div class="remind-title fl"><span name="cfg_name">号码流量实时提醒（480MB）</span></div>
+                        <div class="fr">
+                            <a href="#" class="margin-md-right js-btn_edit">配置</a>
+                            <a href="#" class="margin-md-right js-btn_control" type="start">启用</a>
+                            <a href="#" class="margin-md-right js-btn_control" type="stop">停用</a>
+                            <a href="#" class="js-btn_control" type="delete">删除</a>
+                        </div>
+                    </div>
+                    <div class="margin-md-btm">
+                        <span class="margin-lg-right">
+                            执行方式：<span name="exe_code">0</span>
+                        </span>
+                        <span class="text-weaker-color">创建时间：</span><span class="text-weaker-color" id="create_date" name="create_date"></span>
+                    </div>
+                    <div class="margin-md-btm">
+                        <div class="fwb">配置描述：</div>
+                        <span name="cfg_desc" ></span>
+                        <!-- <ul class="describe-list" id="trigger_desc">
+                            <li>(1)平台web页面显示告警信息。<br/>
+                            (2)以API形式推送您的应用（需要开通并配置）。<br/>
+                            (3)号码自动暂停GPRS功能。<a href="#">展开></a></li>
+                        </ul> -->
+                    </div>
+                    <div class="margin-md-btm">
+                        <div class="fwb">告警内容：</div>
+                        <span name="data_content_cfg" ></span>
+                        <!-- <ul class="describe-list" id="trigger_desc">
+                            <li>(1)平台web页面显示告警信息。<br/>
+                            (2)以API形式推送您的应用（需要开通并配置）。<br/>
+                            (3)号码自动暂停GPRS功能。<a href="#">展开></a></li>
+                        </ul> -->
+                    </div>
+                </li>
+            </ul>
+             <!-- <div class="load-more">剩余2316条，<a href="#" class="text-brand-primary">加载更多></a></div> -->
+        </div>
+        <div class="panel-footer clearfix">
+        <div class="page-foot-data">
+            <span>共<span class="page-total-num">0</span>页</span>
+            <span><span class="page-data-count">0</span>条数据</span>
+        </div>
+        <div class="page-foot-form">
+            <div class="input-group col-md-14">
+                <div id="pagination-demo" class="js-pagination"></div>
+            </div>
+        </div>
+   		 </div>
+    </div>
+  </div>
+</div>

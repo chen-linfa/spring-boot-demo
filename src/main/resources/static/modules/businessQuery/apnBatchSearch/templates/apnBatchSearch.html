@@ -1,0 +1,29 @@
+<div class="iot-loaction-bar">
+    当前位置：
+    <a href="#" class="link-text"></a>业务查询></a>
+    <a class="current">APN批量查询</a>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+                <div class="form-group">
+                    <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text" class="form-control" placeholder="请输入物联网卡号" id="search_input"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" id="search_btn">查询</button>
+                </div>
+                <div class="form-group fr">
+                    <button class="btn btn-default" type="button" name="batch_balance_temp"><i class="ico-download margin-sm-right"></i>下载批量查询模板</button>
+                    <label class="btn btn-default" for="apn_file"><i class="ico-upload margin-sm-right" ></i>上传批量查询</label>
+                </div>
+            </form>
+            <input type="file" id="apn_file" style="visibility:hidden;height:0px;">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <table class="table table-striped" id="xtab">
+        </table>
+    </div>
+</div>
+</div>

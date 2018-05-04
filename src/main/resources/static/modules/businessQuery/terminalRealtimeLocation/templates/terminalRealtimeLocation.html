@@ -1,0 +1,45 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务查询></a><a class="current">终端实时定位</a>
+</div>
+
+
+<div class="panel">
+    <div class="panel-map-box">
+    	<div id="mapContainer" style="height:600px;"></div>
+        <div class="search-box">
+            <div class="search-box-inner">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="输入卡号查询" name="msisdn" id="msisdn">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="btn_search"><i class="ico-search"></i></button>
+                  </div> 
+                </div>
+        </div>
+    </div>
+</div>
+
+<div id="InfoWindow" style="display: none;">
+	<div class="location-map-wrap">
+		<div class="location-map-popup-box" style="left: 145px; top: -20px;">
+			<div class="lct-map-popup-main">
+				<i class="lct-map-popup-arrow-ico"></i>
+				<div class="lct-map-popup-content">
+					<div class="lct-map-popup-tit clear-fix"  id="infoTopHead"  ">
+						<span class="lct-sign-success ml5 fr" id="infoOnLine"  style="display: none;">在线</span>
+						<span class="lct-sign-error fr" id="infoOutLine" style="display: none;">离线</span>
+						<span class="lct-name"  id="infoMemName" >黄雯龙(158-3841-5215)</span>
+					</div>
+					<div class="lct-map-popup-details mb10"  id="infoTopBody" >
+						<p>
+							<span class="det-th">ICCID：</span>523635633636
+						</p>
+						<p>
+							<span class="det-th">卡号备注：</span>暂无
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务查询></a><a class="current">批量实时定位</a>
+</div>
+
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar text-center">
+            <form class="form-inline">
+                <div class="form-group">
+                   <div class="form-group margin-md-top fl">
+                        <button class="btn btn-default" type="button" name='templ_download_btn'><i class="ico-download margin-sm-right"></i>模板下载</button>
+                        <label class="btn btn-default" type="button" for="loc_realtime_file"><i class="ico-upload margin-sm-right"></i>上传号码实时定位</label>
+                    </div>
+                </div>
+            </form>
+            <input type="file" id="loc_realtime_file" style="visibility:hidden;height:0px;">
+        </div>
+    </div>
+    <div class="panel">
+        <div class="card-activate">
+            <div class="warm-prompt js-warm">
+                <div class="f14">温馨提示</div>
+                <div class="text-weaker-color margin-md-top f20">下载表格模版，导入内容可批量上传</div>
+            </div>
+            <div class="upload-status js-success"  style="display: none">
+                <div class="text-success f20">上传成功</div>
+                <div class="margin-md-top">
+                    <div class="margin-lg-right upload-count">上传成功数量：<span class="f18 text-stress js-succ-num">91</span></div>
+                    <div class="margin-lg-left upload-count">上传失败数量：<span class="f18 text-danger js-fail-num">12</span></div>
+                    <div class="margin-lg-left upload-count">有效号码数量：<span class="f18 text-danger js-valid-num">12</span></div>
+                </div>
+            </div>
+            <div class="upload-status bt js-error"  style="display: none">
+                <div class="f20 text-danger">上传失败</div>
+                <div class="text-weaker-color margin-md-top">只适用于Excel文件</div>
+            </div>
+
+        </div>
+    </div>    
+</div>

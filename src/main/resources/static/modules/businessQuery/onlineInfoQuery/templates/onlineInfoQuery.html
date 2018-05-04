@@ -1,0 +1,36 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务查询></a><a class="current">在线信息查询</a>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+                <div class="form-group">
+                <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" 
+                    type="text" class="form-control" id="search_input"   placeholder="请输入物联网卡号">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button"  id="search_btn">查询</button>
+                </div>
+                <div class="form-group" style="margin-right:330px;margin-top:10px">
+                    <label>提示：在线信息查询功能仅对物联卡号码开放使用</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <table class="table table-striped" id="onlineTable"></table>
+    </div>
+    <!-- <div class="panel-footer clearfix">
+        <div class="page-foot-data">
+            <span>共<span class="page-total-num">2</span>页</span>
+            <span><span class="page-data-count">23</span>条数据</span>
+        </div>
+        <div class="page-foot-form">
+            <div class="input-group col-md-14">
+                <div id="pagination-demo" class="js-pagination"></div>
+            </div>
+        </div>
+    </div> -->
+</div>
+</div>

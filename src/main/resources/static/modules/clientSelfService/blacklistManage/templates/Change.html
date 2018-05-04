@@ -1,0 +1,36 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">修改黑名单信息</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <form action=""  id="bw_detail">
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>MSISDN(卡号)：<span class="text-danger">*</span>：
+                            	<input type="text" class="inp-text bd_gray"  name="msisdn" id="msisdn"  placeholder="选择黑名单成员" id="msisdn" style="width:200px;" fieldType='db' disabled = "true" ifStale = "1" nullable="0" null_tip="请选择客户成员!">
+                       		</label>
+
+                       
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="form-group no-margin-bottom" >
+                        <label>描述：</label>
+                        <textarea class="form-control" rows="4" name="comments" id="comments" disabled = "true";></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="form-group no-margin-bottom">
+        <button class="btn btn-primary" type="button" id="submit_btn">保存</button>
+         <button class="btn btn-default" type="button" id="cancle_btn">取消</button>
+    </div>
+</div>

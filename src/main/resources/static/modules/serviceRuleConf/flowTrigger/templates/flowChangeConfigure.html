@@ -1,0 +1,117 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">修改配置</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <div class="form-group">
+        <label>配置名称<span class="text-danger">*</span>：</label>
+        <div><input type="text" class="form-control" placeholder="配置名称" id="trigger_name"></div>
+    </div>
+    <div class="form-group" id="flow_level">
+        <label>流量等级：</label>
+        <label class="flow_level_option margin-md-right" name="480|MB" style="font-weight: normal;">
+            <input class="js-check " type="radio" name="flow_level" id="flow_level_480" value="480|MB">480MB
+        </label>
+        <label class="flow_level_option margin-md-right" name="600|MB" style="font-weight: normal;">
+            <input class="js-check " type="radio" name="flow_level" id="flow_level_600" value="600|MB">600MB
+        </label>
+    </div>
+    <div class="form-group js-edit hidden">
+        <label>号码列表：</label>
+        <a href="#" class="margin-md-right" id="view">查看已配置成员</a><a href="#" class="margin-md-right" id="add">添加成员</a><a href="#" id="delete">删除成员</a>
+    </div>
+    <div class="form-group js-add hidden" id="mem_choose_type">
+        <label>号码列表：</label>
+        <div>
+            <label><input class="js-check margin-md-right" type="radio" name="mem_choose_type_option" id="all" ></label>全部成员（仅物联卡）
+        </div>
+        <div>
+            <label><input class="js-check margin-md-right" type="radio" name="mem_choose_type_option" id="part"></label>选择部分成员<a href="#" class="margin-lg-left hidden" id="part_mem_show">选择成员</a>
+        </div>
+        <div>
+            <label><input class="js-check margin-md-right" type="radio" name="mem_choose_type_option" id="upload"></label>上传Excel
+            <label for="" class="fwn margin-md-right hidden text-primary" id="download_templet" style="cursor: pointer;">模板下载</label>
+            <label for="trigger_file" class="fwn hidden text-primary"  id="upload_mem_show" style="cursor: pointer;">上传附件</a></label>
+            <input type="file" id="trigger_file" style="visibility: hidden;">
+        </div>
+    </div>
+    <div class="form-group" id="action_type">
+        <label>提醒能力：</label>
+        <div>
+            <label>
+                <input class="js-check" type="checkbox" name="checkbox_option" checked="checked" disabled="" value="">
+            </label>
+            WEB
+        </div>
+        <div>
+            <label><input class="js-check single_checkbox" type="checkbox" name="checkbox_option" value="API|API_ABILITY_CODE"></label>
+            API<span class="text-weaker-color ">（具体请您在API应用管理去开通并配置流量实时提醒推送API）</span>
+        </div>
+        <div>
+             <label><input class="js-check single_checkbox" type="checkbox" name="checkbox_option" value="SMS|PHONE_NO" sms="yes"></label>
+            短信
+        </div>
+        <div>
+            <input type="text" class="form-control hidden" id="action_type_msisdn" placeholder="提示性文字～">
+        </div>
+        <div>
+             <label> <input class="js-check single_checkbox" type="checkbox" name="checkbox_option" value="APP|APP_PARAM"></label>
+           APP<span class="text-weaker-color ">（具体信息请登录上海物联网app客户端进行查看）</span>
+        </div>
+    </div>
+    <div class="form-group" id="other_action_type">
+        <label>附加能力：</label>
+        <div>
+            <label>
+            <input class="js-check single_checkbox" type="checkbox" name="checkbox_option" value="GPRS_SUSPEND|PROD_CODE">
+            </label> 自动暂停GPRS功能
+        </div>
+        <div>
+            <label>
+            <input class="js-check single_checkbox" type="checkbox" name="checkbox_option" value="ORDER_FLOW_OVERLAY_OFFER|OFFER_CODE">
+            </label> 自动订购叠加包
+        </div>
+    </div>
+    <div class="form-group">
+        <label>配置描述：</label>
+        <div>
+            <ul class="change-configure-list" id="trigger_desc">
+                <li class="tip">开通号码流量实时提醒功能，当流量超过阀值<span class="flow_level_tip"></span>时，将提供以下服务：</li>
+                <li class="tip">（1）平台web页面显示告警信息。</li>
+                <li class="tip auto_tip SMS_tip hidden">（<span class="num">2</span>）以短信形式提醒手机号码<span class="msisdn"></span>。</li>
+                <li class="tip auto_tip API_tip hidden">（<span class="num">3</span>）以API形式推送您的应用（需要开通并配置）。</li>
+                <li class="tip auto_tip GPRS_SUSPEND_tip hidden">（<span class="num">4</span>）号码自动暂停GPRS功能。</li>
+                <li class="tip auto_tip ORDER_FLOW_OVERLAY_OFFER_tip hidden">（<span class="num">5</span>）号码自动订购叠加包 。</li>
+            </ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>注意：</label>
+        <div class="text-danger">此配置需要订购物联卡号码激活实时提醒套餐，并会在"提交"生效后订购完成。
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="form-group no-margin-bottom">
+        <button class="btn btn-primary" type="button" id="config_save_btn">提交</button>
+        <button class="btn btn-default" type="button" id="cancel_btn">取消</button>
+    </div>
+</div>
+<!-- 
+    以下div与旧版本后端兼容，旧版本要求发送配置描述。但在页面上不显示
+ -->
+<div>
+    <table style="display: none;">
+        <tr>
+            <th>配置描述：</th>
+            <td id="trigger_desc_send">
+                <span class="tip">开通号码流量实时提醒功能，当流量超过阀值<span class="flow_level_tip"></span>时，将提供以下服务：<br/>
+                （1）平台web页面显示告警信息。<br/></span>
+                <span class="tip auto_tip SMS_tip hidden">（<span class="num">2</span>）以短信形式提醒手机号码<span class="msisdn"></span>。<br/></span>
+                <span class="tip auto_tip API_tip hidden">（<span class="num">3</span>）以API形式推送您的应用（需要开通并配置）。<br/></span>
+                <span class="tip auto_tip GPRS_SUSPEND_tip hidden">（<span class="num">4</span>）号码自动暂停GPRS功能。<br/></span>
+                <span class="tip auto_tip ORDER_FLOW_OVERLAY_OFFER_tip hidden">（<span class="num">5</span>）号码自动订购叠加包 。<br/></span>
+            </td>
+        </tr>
+    </table>
+</div>

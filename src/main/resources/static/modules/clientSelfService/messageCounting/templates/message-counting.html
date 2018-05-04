@@ -1,0 +1,54 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">客户自助服务></a><a class="current">短信统计</a>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="" class="control-label">开始时间：</label>
+                    <div class="input-group  margin-lg-right">
+                        <input type="text" class="form-control js-date" placeholder="-选择时间-" id="start_time">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="control-label">结束时间：</label>
+                    <div class="input-group  margin-lg-right">
+                        <input type="text" class="form-control js-date" placeholder=" -选择时间- " id="end_time">
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <button class="btn btn-primary" type="button" id="query">查询</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mes-count">
+        <div class="iot-panel-group">
+            <div class="panel">
+                <div class="padding-md-vert">查询结果<span id="time_text">（<span id="starttime_text"></span>至<span id="endtime_text"></span>）</span></div>
+                <div class="padding-lg-vert clearfix">
+                    <div class="fl send-total">
+                        <div class="f14">短信发送总数<span class="f12 text-weaker-color" >（条）</span></div>
+                        <div class="f24" id="send_count"></div>
+                    </div>
+                    <div class="fl">
+                        <div class="f14">短信接收总数<span class="f12 text-weaker-color" >（条）</span></div>
+                        <div class="f24" id="receive_count"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" style="display:none">
+                <div class="clearfix padding-lg-vert">
+                    <div class="fwb f14 fl">该卡号最近半年短信使用情况</div>
+                    <div class="f12 fr">
+                        <div class="fl margin-lg-right"><i class="sub-point send"></i>短信发送总数</div>
+                        <div class="fl"><i class="sub-point receive"></i>短信接收总数</div>
+                    </div>
+                </div>
+                <div class="mes-count-chart js-chart-1"></div>
+            </div>
+        </div>
+    </div>

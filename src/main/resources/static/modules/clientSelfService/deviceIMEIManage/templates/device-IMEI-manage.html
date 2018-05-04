@@ -1,0 +1,57 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">客户自助服务>></a><a class="current">设备IMEI管理</a>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入MSISDN卡号，IMEI" id="search_input" style="width: 180px;">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" id="btn_search">查询</button>
+                </div>
+                <div class="form-group fr">
+                    <button class="btn btn-default" type="button" id="btn_downloadInfo"><i class="ico-download margin-sm-right"></i>下载批量模板查询</button>
+            
+                    <label class="btn btn-default" for="cust_mem_info_file"><i class="ico-upload margin-sm-right" ></i>上传批量查询</label>
+                </div>
+            </form>
+            <input type="file" id="cust_mem_info_file" style="visibility:hidden;height:0px;">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <table class="table table-striped m-num-m-table" id="xtab">
+        </table>
+        <table style="display:none;">
+                <tr id="detail_tr">
+                    <td colspan="6" class="no-border-bg">
+                        <div class="expand clearfix">
+                            <ul>
+                                <li>IMEI:    <span id="IMEI">0</span></>
+                                <li>IMEI记录时间: <span id="day_cycle">0</span></> </li>
+                                <li>TAC：<span id="tac">0</span></></li>
+                                <li>SNR：<span id="snr">0</span></></li>
+                                <li>CD_SD：<span id="cd_sd">0</span></></li>
+                                <li>终端类型：<span id="type">0</span></></li>
+                                <li>设备品牌：<span id="terminal_name">0</span></></li>
+                                <li>终端型号：<span id="terminal_model">0</span></></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+        </table>
+    </div>
+    <div class="panel-footer clearfix">
+        <div class="page-foot-data">
+            <span>共<span class="page-total-num">0</span>页</span>
+            <span><span class="page-data-count">0</span>条数据</span>
+        </div>
+        <div class="page-foot-form">
+            <div class="input-group col-md-14">
+                <div id="pagination-demo" class="js-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

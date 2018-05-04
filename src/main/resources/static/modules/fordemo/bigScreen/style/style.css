@@ -1,0 +1,615 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+button,
+input,
+textarea,
+hr,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+i,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+hr {
+  height: 0;
+  border: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+a,
+a:hover,
+a:active,
+a:link {
+  text-decoration: none;
+  color: #333333;
+}
+html {
+  font-size: 10px;
+}
+html,
+body {
+  font-family: "microsoft yahei", "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", "Hiragino Sans GB", Simsun, Tahoma, Arial, Roboto, sans-self;
+  height: 100%;
+}
+body {
+  font-weight: normal;
+  background: #1b2a48;
+  color: #ffffff;
+  padding: 3.9rem;
+}
+body,
+button,
+input,
+textarea {
+  font-family: "microsoft yahei", "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", "Hiragino Sans GB", Simsun, Tahoma, Arial, Roboto, sans-self;
+  font-size: 16px;
+}
+strong {
+  font-weight: bold;
+}
+button,
+input,
+textarea {
+  outline: none;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.f12 {
+  font-size: 1.2rem;
+}
+.f14 {
+  font-size: 1.4rem;
+}
+.f20 {
+  font-size: 2rem;
+}
+.f24 {
+  font-size: 2.4rem;
+}
+.f28 {
+  font-size: 2.8rem;
+}
+.f30 {
+  font-size: 3rem;
+}
+.f36 {
+  font-size: 3.6rem;
+}
+.f40 {
+  font-size: 4rem;
+}
+.text-color {
+  color: #5e6b86;
+}
+.font-color {
+  color: #ffffff;
+}
+.text-tips {
+  color: #fff801;
+}
+.text-one {
+  color: #FF000D;
+}
+.text-two {
+  color: #FF6300;
+}
+.text-three {
+  color: #F0FE49;
+}
+.text-four {
+  color: #939CAD;
+}
+.text-five {
+  color: #939CAD;
+}
+.ico-loading,
+.ico-up-triangle,
+.ico-down-triangle {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+}
+.ico-loading {
+  background: url("../images/ico-loding.png") center center / cover;
+}
+.ico-down-triangle {
+  background: url("../images/ico-down-triangle.png") center center / cover;
+}
+.ico-up-triangle {
+  background: url("../images/ico-up-triangle.png") center center / cover;
+}
+.ico-loading {
+  width: 2.3rem;
+  height: 2rem;
+}
+.ico-down-triangle,
+.ico-up-triangle {
+  width: 1.2rem;
+  height: 1.4rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.7rem;
+  margin-left: 2rem;
+}
+.clear-fix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.clear-fix {
+  zoom: 1;
+}
+.clear {
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.ml10 {
+  margin-left: 1rem;
+}
+.ml20 {
+  margin-left: 2rem;
+}
+.mr10 {
+  margin-right: 1rem;
+}
+.mr20 {
+  margin-right: 2rem;
+}
+.mb5 {
+  margin-bottom: 0.5rem;
+}
+.mb10 {
+  margin-bottom: 1rem;
+}
+.mb20 {
+  margin-bottom: 2rem;
+}
+.mlr10 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mlr20 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.vertical-middle {
+  vertical-align: middle;
+}
+.vertical-top {
+  vertical-align: top;
+}
+.vertical-bottom {
+  vertical-align: bottom;
+}
+.box-sizing {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.panel {
+  margin-bottom: 12px;
+  background: #28395c;
+  padding: 1.2rem;
+}
+.panel.last {
+  margin-bottom: 0;
+}
+.title {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.rank-list .rank-item {
+  width: 24%;
+  border: 1px solid #524e4e;
+  float: left;
+  margin-right: 1%;
+}
+.rank-list .rank-item.api-list {
+  width: 49%;
+}
+.rank-list .rank-item:nth-last-of-type(1) {
+  margin-right: 0;
+}
+.rank-list .rank-item table thead {
+  background: #2a446c;
+}
+.rank-list .rank-item table tr:nth-child(even) {
+  background: #2a446c;
+}
+.rank-list .rank-item table tr {
+  height: 3rem;
+}
+.rank-list .rank-item table tr th:nth-of-type(1) {
+  text-align: center;
+}
+.rank-list .rank-item table th {
+  padding: 0.6rem;
+}
+.rank-list .rank-item table th span {
+  color: #0C6EB0;
+  font-size: 1.2rem;
+  margin-left: 0.8rem;
+}
+.rank-list .rank-item table td {
+  padding: 0.6rem;
+}
+.header {
+  height: 8.1rem;
+  width: 100%;
+  padding: 2.3rem 1.2rem;
+  margin-bottom: 12px;
+  background: #28395c;
+}
+.header .time-box .time {
+  width: 11rem;
+  height: 4.3rem;
+}
+.header .time-box .time .time-date {
+  width: 1.7rem;
+  border: 1px solid #5e6b86;
+}
+.header .time-box .update-time {
+  width: 12.6rem;
+  height: 3.6rem;
+}
+.header .time-box .update-time select {
+  border-radius: 0.3rem;
+  height: 100%;
+  background: #111F3D;
+  color: #5e6b86;
+  padding: 0 1.2rem;
+  border: none;
+  font-size: 1.6rem;
+}
+.header .time-box .refresh {
+  border-radius: 0.3rem;
+  position: relative;
+  height: 3.6rem;
+  width: 4.2rem;
+  background: #111F3D;
+}
+.header .time-box .refresh i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1rem;
+  margin-left: -1.2rem;
+}
+.main {
+  margin-left: -0.6rem;
+  margin-right: -0.6rem;
+}
+.main-left,
+.main-right {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.main-left {
+  width: 33.3333%;
+}
+.main-left .total-user-info {
+  width: 100%;
+  height: 9.7rem;
+}
+.main-left .user-dev-info {
+  width: 100%;
+  height: 30.2rem;
+}
+.main-left .company-dev-info {
+  width: 100%;
+  height: 44.1rem;
+}
+.main-right {
+  width: 66.6666%;
+}
+.main-right .main-right-top {
+  margin-bottom: 12px;
+  height: 65.1rem;
+  width: 100%;
+}
+.main-right .main-right-top .m-r-t-left {
+  width: 50%;
+  padding-right: 6px;
+}
+.main-right .main-right-top .m-r-t-left .num-stats {
+  width: 100%;
+  height: 15.6rem;
+}
+.main-right .main-right-top .m-r-t-left .terminal-distribution {
+  width: 100%;
+  height: 43.5rem;
+  background: #28395c;
+}
+.main-right .main-right-top .m-r-t-right {
+  width: 50%;
+  padding-left: 6px;
+}
+.main-right .main-right-top .m-r-t-right .group-cust-count {
+  width: 100%;
+  height: 9.8rem;
+}
+.main-right .main-right-top .m-r-t-right .api-data {
+  width: 100%;
+  height: 49.4rem;
+  background: #28395c;
+}
+.main-right .main-right-top .m-r-t-right .api-data .chart-api {
+  width: 100%;
+  height: 23.4rem;
+}
+.main-right .main-right-bottom {
+  width: 100%;
+  background: #28395c;
+}
+.main-right .main-right-bottom .group-ranking {
+  width: 100%;
+  height: 24.9rem;
+}
+.total-user-info .user-count {
+  width: 50%;
+  height: 100%;
+  background: #1b918a;
+  float: left;
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.5rem;
+}
+.total-user-info .user-count p:nth-of-type(1) {
+  font-size: 2rem;
+  margin-top: 0.7rem;
+}
+.total-user-info .user-count p:nth-of-type(2) {
+  margin-top: 1rem;
+}
+.total-user-info .user-dynamic {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.total-user-info .user-dynamic .add {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 2rem 0 2rem 3.9rem;
+}
+.total-user-info .user-dynamic .add p {
+  position: relative;
+}
+.user-dev-info .user-dev-chart {
+  width: 100%;
+  height: 25.6rem;
+}
+.user-dev-info .sub-point {
+  width: 0.8rem;
+  height: 0.8rem;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.user-dev-info .sub-point.total {
+  background: #46DBCC;
+}
+.user-dev-info .sub-point.new {
+  background: #35A8DB;
+}
+.company-dev-info .company-dev-chart {
+  height: 39.5rem;
+  width: 100%;
+}
+.num-stats .stats-list {
+  padding: 1.1rem 0;
+}
+.num-stats .stats-list li {
+  width: 16.666666%;
+  float: left;
+}
+.num-stats .stats-list li .list-item {
+  padding: 0.5rem 0;
+}
+.num-stats .stats-list li .progress-bar {
+  width: 80%;
+  height: 0.4rem;
+  background: #2a446c;
+}
+.num-stats .stats-list li .progress-bar .progress-bar-inner {
+  height: 100%;
+  width: 53%;
+  background: #65D4F0 ;
+}
+.terminal-distribution .terminal-chart {
+  width: 100%;
+  height: 34.9rem;
+}
+.terminal-distribution .btn-mapsMode {
+  height: 4rem;
+  width: 100%;
+  background: #4689E8;
+  color: #ffffff;
+  border-radius: 0.5rem;
+}
+.group-cust-count .cust-count {
+  width: 50%;
+  height: 100%;
+  background: #0D507D;
+  float: left;
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.5rem;
+}
+.group-cust-count .cust-count p:nth-of-type(1) {
+  font-size: 2rem;
+  margin-top: 0.7rem;
+}
+.group-cust-count .cust-count p:nth-of-type(2) {
+  margin-top: 1rem;
+}
+.group-cust-count .group-dynamic {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.group-cust-count .group-dynamic .add {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 2rem 0 2rem 3.9rem;
+}
+.group-cust-count .group-dynamic .add p {
+  position: relative;
+}
+.map-ranking,
+.main-map,
+.map-data {
+  padding-left: 6px;
+  padding-right: 6px;
+  float: left;
+  height: 92.8rem;
+}
+.map-ranking {
+  width: 21.77%;
+}
+.map-ranking .ranking-list {
+  background: #28395c;
+}
+.map-ranking .ranking-list .list-item {
+  height: 6rem;
+  padding: 0 1.6rem;
+  line-height: 6rem;
+}
+.map-ranking .ranking-list .list-item:nth-child(even) {
+  background: #2a446c;
+}
+.main-map {
+  width: 56.45%;
+  text-align: center;
+}
+.main-map .charts-zj {
+  height: 77.8rem;
+  width: 100%;
+  padding-top: 7.5rem;
+}
+.map-data {
+  width: 21.77%;
+}
+.map-data .map-data-list .data-list-item {
+  height: 13rem;
+  width: 50%;
+  display: inline-block;
+  padding: 2.8rem 2.2rem;
+  float: left;
+  color: #8796a9;
+}
+.map-data .map-data-list .data-list-item.even {
+  background: #354462;
+}
+.map-data .map-data-list .data-list-item.odd {
+  background: #435a79;
+}
+.icon-1,
+.icon-2,
+.icon-3,
+.icon-num {
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 5px;
+  margin-right: 4rem;
+}
+.icon-1 {
+  background: #ff4651;
+}
+.icon-2 {
+  background: #fe8131;
+}
+.icon-3 {
+  background: #c4ba93;
+}
+.icon-num {
+  background: #485674;
+}
+.panel-box {
+  height: 92.8rem;
+  background: #28395c;
+  margin-bottom: 1.2rem;
+}

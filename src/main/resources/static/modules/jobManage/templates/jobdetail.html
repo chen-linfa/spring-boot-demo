@@ -1,0 +1,84 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">新增定时任务</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <form action="">
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>任务名称：</label>
+                            <input type="hidden" name="job_info_id"/>
+                            <input type="text" class="form-control" placeholder="" name="job_info_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>任务执行类：</label>
+                            <input type="text" class="form-control" name="job_class_name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>时间表达式：</label>
+                            <i class="glyphicon glyphicon-time" style="color:#000" title="Cron时间表达式" id="cron_tip"></i>
+                            <input type="text" class="form-control" name="cron_expression">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>任务状态：</label>
+                            <input type="text" class="form-control" name="trigger_state">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group no-margin-bottom">
+                    <label>服务器列表：</label>
+                    <input type="text" class="form-control" name="hosts" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group no-margin-bottom">
+                    <label>任务描述：</label>
+                    <textarea class="form-control" rows="8" name="description"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer clearfix">
+    <div class="form-group no-margin-bottom fr">
+        <button class="btn btn-primary" type="button" id="btn_confirm">保存</button>
+        <button class="btn btn-default" data-dismiss="modal" type="button">取消</button>
+    </div>
+</div>
+<div id="cron_tip_div" style="display:none;">
+		每隔5秒执行一次：*/5 * * * * ?  <br>
+		每隔1分钟执行一次：0 */1 * * * ?  <br>
+		每天23点执行一次：0 0 23 * * ?  <br>
+		每天凌晨1点执行一次：0 0 1 * * ?  <br>
+		每月1号凌晨1点执行一次：0 0 1 1 * ?  <br>
+		每月最后一天23点执行一次：0 0 23 L * ? <br>
+		每周星期天凌晨1点实行一次：0 0 1 ? * L  <br>
+		在26分、29分、33分执行一次：0 26,29,33 * * * ?  <br>
+		每天的0点、13点、18点、21点都执行一次：0 0 0,13,18,21 * * ?
+</div>

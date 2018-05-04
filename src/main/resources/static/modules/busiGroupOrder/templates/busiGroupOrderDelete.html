@@ -1,0 +1,373 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">业务订购></a><a class="current">订购组套餐退订</a>
+</div>
+<!-- 步骤导航卡 -->
+<div class="panel panel-default">
+    <!-- <div class="panel-body">
+        <h3 style="margin-left:230px; float:left; display:inline">
+           	<strong style="color:blue;">选订购组</strong>
+        </h3>
+        <h3 style="margin-left:230px; float:left; display:inline" id="choose_step2">
+           	<strong>选退订套餐</strong>
+        </h3>
+        <h3></h3>
+    </div> -->
+    <div class="panel-select-bar" id="step_one">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选订购组</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">2</span>
+	                    <span class="text-weaker-color">选套餐</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">3</span>
+	                    <span class="text-weaker-color">确认提交</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="panel-select-bar" style="display: none;" id="step_two">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选订购组</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">2</span>
+	                    <span class="text-brand-primary">选套餐</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle">3</span>
+	                    <span class="text-weaker-color">确认提交</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="panel-select-bar" style="display: none;" id="step_three">
+	        <ul>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">1</span>
+	                    <span class="text-brand-primary">选订购组</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">2</span>
+	                    <span class="text-brand-primary">选套餐</span>
+	                </a>
+	                <i class="ico-right"></i>
+	            </li>
+	
+	            <li class="select-item">
+	                <a href="#">
+	                    <span class="num-circle active">3</span>
+	                    <span class="text-brand-primary">确认提交</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	    
+</div>
+<!-- 订购组列表 -->
+<div class="iot-panel-group" id="group_div">
+	<div class="panel panel-default">
+		<div class="panel-control-bar">
+	        <form action="" class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	            <div class="form-group">
+	                    <input type="text" class="form-control" placeholder="请输入订购组名称" id="input_search" >
+	            </div>
+	            <div class="form-group">
+	                <button class="btn btn-primary" type="button" id="btn_search">搜索</button>
+	            </div>
+	        </form>
+    	</div>
+	</div>
+    <div class="panel panel-default">
+        <table class="table table-striped" id="xtab"></table>
+    </div>
+    <div class="panel-footer clearfix">
+        <div class="page-foot-data">
+            <span>共<span class="page-total-num">0</span>页</span>
+            <span><span class="page-data-count">0</span>条数据</span>
+        </div>
+        <div class="page-foot-form">
+            <div class="input-group col-md-14">
+                <div id="pagination-demo" class="js-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <button type="button" class="btn btn-primary btn-lg" id="btn_next_step">下一步</button>
+    <button type="button" class="btn btn-default" id="btn_reset">重置</button> -->
+    
+</div>
+<!-- 订购组关系 -->
+<div class="group_rel_div" style="display:none">
+	<div class="iot-panel-group">
+	    <div class="panel">
+	        <div class="panel-control-bar">
+	            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	                <div class="form-group">
+	                   <input type="text" class="form-control" placeholder="请输入成员卡号" id="search_input">
+	                </div>
+	                <div class="form-group">
+	                    <button class="btn btn-primary" type="button" id="btn_search_1">查询</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="panel panel-default">
+	        <table class="table table-striped" id="form_table_1">
+	            
+	        </table>
+	    </div>
+	    <div class="panel-footer clearfix">
+	        <div class="page-foot-data">
+	            <span>共<span class="page-total-num_1">0</span>页</span>
+	            <span><span class="page-data-count_1">0</span>条数据</span>
+	        </div>
+	        <div class="page-foot-form">
+	            <div class="input-group col-md-14">
+	                <div id="pagination-demo" class="js-pagination_1"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+<!-- 订购组下套餐列表 -->
+<div class="iot-panel-group" style="display: none;" id="tc_div">
+    <div class="panel panel-default">
+    	<div class="panel-control-bar">
+	        <form action="" class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+	            <div class="form-group">
+	                    <input type="text" class="form-control" placeholder="请输入套餐名称" id="tc_name" >
+	            </div>
+	            <div class="form-group">
+	                <button class="btn btn-primary" type="button" id="tc_search">搜索</button>
+	            </div>
+	        </form>
+    	</div>
+        <!-- <table class="table table-striped" id="xtab_tc"></table> -->
+    </div>
+    <div class="panel panel-default">
+    <div class="padding-md">
+		<div class="block-divide-wrap">
+			<ul class="block-divide-list js_ul_template" style="display:none;">
+				<li class="list-item">
+					<div class="media">
+						<div class="media-left">
+							<img src="frm/template/images/img-order-group.png">
+						</div>
+						<div class="media-body">
+							<div class="media-heading clearfix">
+								<span class="pull-right title-control-bar-sm">
+									<a href="javascript:void(0);" class="link margin-lg-left  click_unsub">退订</a>
+									&nbsp;
+									<a href="javascript:void(0);" class="link margin-lg-left see_detail">详情</a>
+								</span>
+								<span class="media-title js_prod_name">移动数据流量无线DDN企业端无月租套餐</span>
+								<span class="text-weaker-color js_prod_code">（产品编码：340000101084）</span>
+							</div>
+							<div>
+								<span class="states states-default js_prod_type">普通套餐</span>
+								<span class="states valid js_prod_status">有效</span>
+								<span class="text-weaker-color margin-lg-left js_prod_time">有效时间:2017-08-10至2017-08-20</span>
+							</div>
+							<!-- <div class="text-weaker-color margin-top js_prod_desc">
+								这里是产品描述
+							</div> -->
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="block-divide-list js_tc_ul">
+				
+			</ul>
+			<!-- <div class="load-more">剩余2316条，<a href="#" class="text-brand-primary">加载更多&gt;</a></div> -->
+		</div>
+	</div>
+  </div>
+</div>
+<!-- 套餐详情展示 -->
+<div class="iot-panel-group" style="display: none;" id="tc_detail_div">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            	套餐详情
+        </h3>
+    </div>
+</div>
+<div class="panel panel-default">
+			<div class="panel-body"> 
+				<form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+					<div class="form-group">
+						<label for="" class="control-label">套餐名称：</label>
+						<div class="input-group  margin-lg-right">
+	                        <input type="text" readonly="true" class="form-control" id="tc_detail_name">
+	                    </div>
+					</div>
+				</form>
+				<form class="form-inline" style="margin-top:20px;" onkeydown="if(event.keyCode==13){return false;}">
+	                <div class="form-group">
+	                    <label for="" class="control-label">生效时间：</label>
+	                    <div class="input-group  margin-lg-right">
+	                        <input type="text" readonly="true" style="width:143px;" class="form-control" id="eff_time" disabled>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="" class="control-label">失效时间：</label>
+	                    <div class="input-group  margin-lg-right">
+	                        <input type="text" readonly="true" style="width:143px;" class="form-control" id="exp_time" disabled>
+	                    </div>
+	                </div>
+            </form>
+			</div>
+</div>
+<div class="panel panel-default">
+	 <div class="panel-body">
+    <div id="tc_attr_div" style="display:none;">
+       	 <!-- <h5>
+            	套餐属性
+       	 </h5> -->
+       	 <!-- <label class="text-middle ml10" style="padding-left:18px;margin-right:20px;">套餐属性</label> -->
+       	 		<form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+					<div class="form-group">
+						<label for="" class="control-label">套餐属性</label>
+					</div>
+				</form>
+    	</div>
+    	</div>
+    	<!-- <form class="form-inline" id="form_template" style="display:none;margin-top:15px;">
+					<div class="form-group">
+						<label for="" class="control-label"></label>
+						<div class="input-group  margin-lg-right">
+	                        <input type="text" readonly="true" class="form-control" id="tc_detail_name">
+	                    </div>
+					</div>
+				</form> -->
+    <!-- <div class="panel-control-bar">
+	        <div class="from-table mb20">
+						<table>
+							<tbody>
+							<tr>
+							<th>
+								<em class="text-middle ml10" style="padding-left:18px;margin-right:20px;">套餐名称</em>
+							</th>
+								<td>
+								<label>
+									<input type="text" readonly="true" class="inp-text inp-size-s form-control" id="tc_detail_name">
+								</label>
+								</td>
+								<th><em class="text-middle ml10" style="padding-left:18px;margin-right:20px;">生效时间</em></th>
+                   				<td>
+                   					<label style="padding-right:8px;">
+										<input type="text" readonly="true" class="inp-text inp-size-s form-control" name="time" id="eff_time">
+									</label>
+                   				</td>
+							</tr>
+							<tr>
+								<th><em class="text-middle ml10" style="padding-left:18px;margin-right:20px;">失效时间</em></th>
+                   				<td>
+                   					<label style="padding-right:8px;">
+										<input type="text" readonly="true" class="inp-text inp-size-s form-control" name="time" id="exp_time">
+									</label>
+                   				</td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+    </div> -->
+    <div class="panel-body" id="form_panel">
+	        <!-- <div class="from-table mb20">
+	        			<table id="tab_template" style="display:none;">
+		    				<tr id="tr_template">
+								<th fieldtype="db" dbfield="attr_name">
+									<label class="text-middle ml10" style="padding-left:18px;margin-right:20px;"></label>
+								</td>
+								<td fieldtype="db" dbfield="attr_value">
+									<label>
+									</label>
+								</td>
+							</tr>
+		    			</table>
+						<table id="tab_prod_attr">
+							<tbody>
+							<tr>
+							<th>
+								<em class="text-middle ml10" style="padding-left:18px;margin-right:20px;">套餐属性</em>
+							</th>
+								<td>
+								<label>
+									<input type="text" readonly="true" class="inp-text inp-size-s"  id="tc_attr">
+								</label>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+					</div> -->
+    </div>
+    <div class="footer">
+    	<button type="button" class="btn btn-primary btn-lg" id="btn_back">返回</button>
+    </div>
+</div>
+</div>
+<!-- 订单信息展示 -->
+<div class="iot-panel-group" style="display:none;" id="tc_suc_div">
+	<div class="panel">
+	    <div class="order-finish">
+	        <div class="margin-md-btm"><img src="frm/template/images/successs.png" alt=""></div>
+	        <div class="text-finish">订单创建成功</div>
+	        <div class="text-finish">本次退订了<span id="prod_num"></span>个套餐。已生成订单号：<span id="order_id"></span></div>
+	        <ul class="order-list" id="add_list">
+	        </ul>
+	        <div class="margin-lg-top"><a href="javascript:void(0);" class="margin-lg-right continue_delete">继续退订套餐</a><a href="#" class="queryDetail">查看订单详情</a></div>
+	    </div>
+	</div>
+</div>
+<!-- <div class="panel panel-default" style="display: none;"  id="tc_suc_div">
+<div class="iot-panel-group" style="display: none;"  id="tc_suc_div">
+	<div class="content" style="padding-bottom: 0px;"> 
+       <div class="from-table"> 
+        <div style="margin-top: 20px; margin-bottom: 70px;"> 
+         <div style="text-align: center; vertical-align: middle; height: 50px;"> 
+	          <img width="34" height="34" src="image/ico_success.png" id="img_res_success"/>
+	          <img width="34" height="34" src="image/ico_error.png" id="img_res_error" style="display: none"/>
+	          <label style="font-size: large;" >提交成功!</label> 
+         </div> 
+         <div style="text-align: center; font-size: medium;"> 
+          <label id="show_result_info">本次添加10个号码，选购4个套餐，已生成订单号:00000000000000000000</label> 
+         </div> 
+        </div> 
+       </div> 
+      </div>
+      <div class="content" style="padding-top: 0px;" id=""> 
+       <div style="text-align: center; margin-top: 20px;">
+         <label id="delete_tc_agin">继续退订套餐</label> &nbsp;&nbsp;&nbsp;
+         <label id="scan_order">查看订单</label> 
+        
+        <button class="inp-submit-btn" type="button" id="return_back">返回</button> &nbsp;&nbsp;&nbsp; 
+       </div> 
+      </div>  
+</div>
+</div>
+ -->

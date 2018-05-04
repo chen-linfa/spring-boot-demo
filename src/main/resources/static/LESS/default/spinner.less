@@ -1,0 +1,33 @@
+.btn-group-stepper {
+  padding: 0;
+  >.btn-stepper{
+    width: auto;
+  }
+}
+
+.btn-stepper {
+  padding: 0 @padding-base-horizontal - 1;
+  border-top: 0;
+  border-bottom: 0;
+  height: (floor(@input-height-base /2) - 1);
+  background-color: transparent;
+
+  &[disabled] {
+    color: @disabled-text-color;
+    .opacity(1);
+  }
+
+  &:hover{
+    color: inherit;
+  }
+  
+  &:focus,
+  &:active:focus,{
+    color: inherit;
+    outline:0;
+  }
+
+  > .glyphicon {
+    top: 0;
+  }
+}

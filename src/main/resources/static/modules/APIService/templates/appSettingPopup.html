@@ -1,0 +1,82 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">能力设置</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <div class="row">
+        <div class="compile-app clearfix">
+            <div class="col-xs-12">
+                <div class="app-name">
+                    <div class="form-group">
+                        <label>能力编码：</label>
+                        <span name="ability_code" class="fwn"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class="compile-app clearfix">
+            <div class="col-xs-12">
+                <div class="app-adress">
+                    <div class="form-group">
+                        <label>能力名称：</label>
+                        <span name="ability_name" class="fwn"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class="compile-app clearfix">
+            <div class="col-xs-12">
+                <div class="app-adress">
+                    <div class="form-group">
+                        <label>能力描述：</label>
+                        <span name="ability_desc" class="fwn"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="setting_send_address" style="display:none;">
+        <div class="compile-app clearfix">
+            <div class="col-xs-12">
+                <div class="app-name">
+                    <div class="form-group">
+                        <label>推送地址<span class="text-danger">*</span>：</label>
+                        <input type="text" class="form-control" id="setting_push_url" placeholder="输入信息～">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class="compile-app clearfix">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label>备注<span class="text-danger">*</span>：</label>
+                    <textarea class="form-control" rows="4" name="comments" id="setting_comments"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="setting_send_type" style="display:none;">
+        <div class="compile-app clearfix">
+            <div class="col-xs-12">
+                <div class="app-name">
+                    <div class="form-group">
+                        <label>推送方式<span class="text-danger">*</span>：</label>
+                       <input type="checkbox" name="push_type" id="setting_push_type" value="HTTP">HTTP
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="form-group">
+        <button class="btn btn-primary setting_ability_btn" type="button">提交</button>
+        <button class="btn btn-default cancel_btn" type="button">取消</button>
+    </div>
+</div>

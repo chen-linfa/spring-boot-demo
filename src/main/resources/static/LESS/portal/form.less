@@ -1,0 +1,51 @@
+// -----------------form-----------------------
+.input-group .form-control{
+    z-index: 0;
+    color: @text-color;
+}
+.form-control[disabled], 
+.form-control[readonly], 
+fieldset[disabled] .form-control,
+.form-control[disabled] ~ .input-group-addon{
+    background-color: @input-bg-disabled;
+    cursor: not-allowed;
+}
+.form-control[disabled] ~ .input-group-addon > .glyphicon, 
+.form-control[disabled] ~ .input-group-addon > .caret{
+    color: @disabled-text-color;
+}
+.control-label{
+	color: @form-label-color;
+	font-weight:normal;
+}
+.input-group-addon{
+	color: @form-label-color;
+}
+.form-group.required .control-label{
+    &:before{
+        content: "*";
+        color: @form-required-color;
+        vertical-align: middle;
+        margin-right: @form-required-margin;
+        line-height: 1;
+    }
+    &:after{
+        display: none;
+    }
+}
+.form-control:focus{
+    border-color: @form-control-focus-color;
+}
+.has-error .form-control{
+    border-color: @state-danger-text;
+}
+textarea {
+    resize:none;
+}
+.tabs-border form,
+.panel > form {
+    padding: 5px 10px 0;
+}
+.panel-body > form {
+    padding-top: 0;
+}

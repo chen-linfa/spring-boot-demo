@@ -1,0 +1,305 @@
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+body,
+button,
+input,
+textarea {
+  font-family: "microsoft yahei", "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", "Hiragino Sans GB", Simsun, Tahoma, Arial, Roboto, sans-self;
+}
+.clear-fix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.clear-fix {
+  zoom: 1;
+}
+.clear {
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-middle {
+  vertical-align: middle;
+}
+.text-top {
+  vertical-align: top;
+}
+.text-end {
+  vertical-align: bottom;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.ml5 {
+  margin-left: 5px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mlr5 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.mlr10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mlr20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.mtb10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.mtb20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.mtb30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.logon_bgA {
+  background: url("../../../image/logon_bgA.jpg") no-repeat;
+}
+.logon_bgB {
+  background: url("../../../image/logon_bgB.jpg") no-repeat;
+}
+.logon_bgA,
+.logon_bgB {
+  background-size: cover;
+  position: relative;
+  min-height: 100%;
+  min-width: 1000px;
+}
+.log-inp-text {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  color: #333;
+  background: none;
+  border: none;
+}
+.log-line-btn {
+  border: 1px solid #fff;
+  height: 50px;
+  padding: 0 20px;
+  color: #fff;
+  border-radius: 5px;
+}
+.log-line-btn:hover {
+  background: url("../../../image/white-bg.png") repeat;
+}
+.log-line-btn:active {
+  background: url("../../../image/white-bg.png") repeat;
+}
+.log-submit-btn {
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  background: #0c5bd4;
+}
+.log-submit-btn:hover {
+  background: #0c3ad4;
+}
+.log-submit-btn:active {
+  background: #065ada;
+}
+.login-top {
+  height: 30px;
+  background: url("../../../image/bg-opecity-black.png") repeat;
+  color: #fff;
+  font-size: 12px;
+}
+.login-top .top-main {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 1000px;
+}
+.login-top .notice-list {
+  background: url("../../../image/ico-notice.png") no-repeat left center;
+  padding: 0 25px 0 30px;
+  overflow: hidden;
+}
+.login-top .notice-list,
+.login-top .notice-list .notice-item {
+  height: 30px;
+  line-height: 30px;
+}
+.login-main {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 1000px;
+}
+.login-main .login-header {
+  padding: 25px 25px 0 25px;
+}
+.login-main .login-header .log-line-btn {
+  font-size: 16px;
+}
+.login-main .login-logo,
+.login-main .login-logo img {
+  width: 578px;
+  height: 63px;
+}
+.login-main .login-content {
+  float: right;
+  width: 400px;
+  padding: 50px;
+  margin-top: 20px;
+  background: url("../../../image/white-bg.png") repeat;
+  border-radius: 5px;
+  color: #fff;
+}
+.login-main .login-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.login-main .login-title h3 {
+  color: #fff;
+  font-size: 22px;
+  position: relative;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+.login-main .login-title .line {
+  position: absolute;
+  width: 100px;
+  height: 0;
+  top: 50%;
+  left: -120px;
+  border-top: 1px solid #fff;
+}
+.login-main .login-title .line.pull-r {
+  left: auto;
+  right: -120px;
+}
+.login-main .login-bottom {
+  margin-bottom: 10px;
+}
+.login-main .login-bottom .log-submit-btn {
+  font-size: 16px;
+}
+.login-main .login-tips {
+  text-align: right;
+  color: #fff;
+}
+.login-main .login-tips .link {
+  color: #fff;
+}
+.login-main .login-list {
+  margin-bottom: 50px;
+}
+.login-main .login-list .log-item-cell,
+.login-main .login-list .log-item-code,
+.login-main .login-list .log-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+.login-main .login-list .log-item-cell {
+  background: #f2f2f2;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 50px;
+}
+.login-main .login-list .log-item-ico {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.login-main .login-list .log-item-code {
+  padding-right: 110px;
+}
+.login-main .login-list .log-item-code .log-item-cell {
+  margin-bottom: 0;
+}
+.login-main .login-list .log-item-code .log-submit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+}
+.login-main .login-list .ico-logon-users {
+  background: url("../../../image/logon_users.png") no-repeat center;
+}
+.login-main .login-list .ico-logon-lock {
+  background: url("../../../image/logon_lock.png") no-repeat center;
+}
+.login-main .login-list .ico-logon-vcode {
+  background: url("../../../image/logon_vcode.png") no-repeat center;
+}
+.logon_bgB .login-list .log-item-cell {
+  border-radius: 25px;
+}
+.logon_bgB .log-submit-btn {
+  border-radius: 25px;
+}
+.logon_bgB .log-item-code {
+  padding-right: 110px;
+}
+.logon_bgB .log-item-code .log-item-cell {
+  border-radius: 25px 0 0 25px;
+  margin-bottom: 0;
+}
+.logon_bgB .log-item-code .log-submit-btn {
+  border-radius: 0 25px 25px 0;
+}
+.notice-list li p a{ color:#fff; float:left;}
+.notice-list li p span{ float:left; margin-left:20px;}

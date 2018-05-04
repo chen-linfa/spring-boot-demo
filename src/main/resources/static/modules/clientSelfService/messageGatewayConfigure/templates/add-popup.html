@@ -1,0 +1,66 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">新增短信网关</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <form action="">
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>短信接入码<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" name="gateway_port" placeholder="示例：10648XXXXXXXX" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>企业代码<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" name="company_code" placeholder="示例：0914XX" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>业务网关登录密码<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" name="login_secret" placeholder="示例：0914XX" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="app-adress">
+                        <div class="form-group">
+                            <label>服务代码<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" name="server_code" placeholder="示例：szxx" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="compile-app clearfix">
+                <div class="col-xs-6">
+                    <div class="app-name">
+                        <div class="form-group">
+                            <label>发送测试MSISDN<span class="text-danger">*</span>：</label>
+                            <input type="text" class="form-control" name="msisdn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="form-group no-margin-bottom">
+        <button class="btn btn-primary" type="button" id="btn_submit">测试并提交</button>
+         <button class="btn btn-default" data-dismiss="modal" type="button">取消</button>
+    </div>
+</div>

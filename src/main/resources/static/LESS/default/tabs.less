@@ -1,0 +1,188 @@
+.ui-tabs {
+  position: relative;
+  .ui-tabs-nav {
+    padding: @nav-tabs-nav-padding;
+    margin-bottom: 0;
+    background-color: @nav-tabs-bg;
+    border-bottom: @nav-tabs-nav-border;
+    &:extend(.clearfix all);
+    li {
+      position: relative;
+      display: block;
+      float: left;
+      &.ui-state-default{
+        margin-left: @nav-tabs-link-margin-left;
+      }
+      a {
+        position: relative;
+        display: block;
+        padding: @nav-tabs-link-padding;
+        margin-right: @nav-tabs-link-margin-right;
+        margin-bottom: @nav-tabs-link-margin-bottom;
+        line-height: @line-height-base;
+        border-width: @nav-tabs-link-border-width;
+        border-style: @nav-tabs-link-border-style;
+        .basic-color(@nav-tabs-link-color,@nav-tabs-link-bg,@nav-tabs-link-border-color);
+        outline: none;
+        overflow: hidden;
+        &:hover,
+        &:focus {
+          padding: @nav-tabs-link-hover-padding;
+          margin-bottom: @nav-tabs-link-hover-margin-bottom;
+          text-decoration: none;
+          border-width: @nav-tabs-link-hover-border-width;
+          border-style: @nav-tabs-link-hover-border-style;
+          .basic-color(@nav-tabs-link-hover-color,@nav-tabs-link-hover-bg,@nav-tabs-link-hover-border-color);
+        }
+      }
+      &.ui-tabs-active > a {
+        &,
+        &:hover,
+        &:focus {
+          padding: @nav-tabs-active-link-hover-padding;
+          margin-bottom: @nav-tabs-active-link-hover-margin;
+          border-width: @nav-tabs-active-link-hover-border-width;
+          border-style: @nav-tabs-active-link-hover-border-style;
+          .basic-color(@nav-tabs-active-link-hover-color,@nav-tabs-active-link-hover-bg,@nav-tabs-active-link-hover-border-color);
+          cursor: default;
+        }
+      }
+      &.ui-tabs-disabled > a {
+        color: @nav-disabled-link-color;
+        &:hover,
+        &:focus {
+          color: @nav-disabled-link-hover-color;
+          text-decoration: none;
+          background-color: transparent;
+          cursor: @cursor-disabled;
+        }
+      }
+      &.ui-state-disabled > a {
+        &,
+        &:hover,
+        &:focus {
+          padding: @nav-disabled-link-hover-padding;
+          margin-bottom: @nav-disabled-link-hover-margin;
+          border-width: @nav-disabled-link-hover-border-width;
+          border-style: @nav-disabled-link-hover-border-style;
+          .basic-color(@nav-disabled-link-color,@nav-disabled-link-hover-bg,@nav-disabled-link-hover-border-color);
+          cursor: @cursor-disabled;
+        }
+      }
+      &.ui-tabs-paging-next {
+          float: right;
+      }
+      &.ui-tabs-paging-prev > a,
+      &.ui-tabs-paging-next > a {
+        width: @nav-tabs-paging-btn-width;
+        border: 0;
+        &:hover,
+        &:focus {
+          color: @nav-tabs-paging-btn-color;
+          background: transparent;
+        }
+      }
+      &.ui-tabs-paging-disabled {
+        &.ui-tabs-paging-prev > a,
+        &.ui-tabs-paging-next > a {
+            color: @nav-disabled-link-color;
+            cursor: @cursor-disabled;
+        }
+      }
+    }
+  }
+  .ui-tabs-panel {
+    padding: @nav-tabs-panel-padding;
+  }
+  .ui-tabs-hide {
+    display: none !important;
+  }
+  .ui-tabs-panel-absolute {
+    position: absolute;
+    top: (@line-height-computed + (@padding-base-vertical * 2));
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+  }
+  &.tabs-border {
+    border: 1px solid @nav-tabs-border-color;
+    .ui-tabs-nav {
+      background-color: @tabs-border-bg;
+      li {
+        a {
+          &:hover,
+          &:focus {
+            margin-bottom: 0;
+            background-color: @tabs-border-link-hover-bg;
+            border: 1px solid @tabs-border-link-hover-border-color;
+            border-bottom: 0;
+          }
+        }
+        &.ui-tabs-active > a {
+          &,
+          &:hover,
+          &:focus {
+            margin-bottom: -1px;
+            background-color: @nav-tabs-active-link-hover-bg;
+            border: 1px solid;
+            border-color: @nav-tabs-active-link-hover-border-color;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+  &.tabs-pill {
+    border: 0;
+    .ui-tabs-nav {
+      background-color: transparent;
+      border: 0;
+      li {
+        a {
+          margin-bottom: 0;
+          border: 1px solid @nav-tabs-border-color;
+          &:hover,
+          &:focus {
+            border-width: 1px;
+            border-style:solid;
+            .basic-color(@nav-tabs-pill-color; @nav-tabs-pill-bg; @nav-tabs-pill-border-color);
+            border-bottom: 1px solid @nav-tabs-pill-border-color;
+          }
+        }
+        &.ui-tabs-active > a {
+          &,
+          &:hover,
+          &:focus {
+            margin-bottom: 0;
+            border-width: 1px;
+            border-style:solid;
+            .basic-color(@nav-tabs-pill-active-color; @nav-tabs-pill-active-bg; @nav-tabs-pill-active-bg);
+            border-bottom: 1px solid @nav-tabs-pill-active-bg;
+          }
+        }
+      }
+    }
+  }
+  &.ui-tabs-left{
+    .tabs-position(left);
+  }
+  &.ui-tabs-right{
+    .tabs-position(right);
+  }
+  &.ui-tabs-bottom{
+    .tabs-position(bottom);
+  }
+}
+.ui-tabs-close {
+  margin: -2px -2px 0 3px;
+  font-size: 18px;
+  .opacity(1);
+  color: @nav-tabs-link-close-color;
+  &:hover,
+  &:focus {
+    color: @nav-tabs-link-close-color;
+    .opacity(1);
+  }
+}
+.tabs-max-width(@set-max-width);

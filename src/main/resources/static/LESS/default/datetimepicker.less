@@ -1,0 +1,186 @@
+.datetimepicker {
+  width: @datetimepicker-width;
+  border-radius: @border-radius-base;
+  direction: ltr;
+  &-rtl {
+    direction: rtl;
+    table tr td span {
+      float: right;
+    }
+  }
+  &-dropdown {
+    top: 0;
+    left: 0;
+    padding: @datetimepicker-dropdown-padding;
+    &:before {
+      content: '';
+      display: inline-block;
+      border-left: @datetimepikcer-dropdown-arrow-width solid transparent;
+      border-right: @datetimepikcer-dropdown-arrow-width solid transparent;
+      border-bottom: @datetimepikcer-dropdown-arrow-width solid @datetimepicker-dropdown-arrow-color;
+      border-top: 0;
+      position: absolute;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      border-left: (@datetimepikcer-dropdown-arrow-width - 1) solid transparent;
+      border-right: (@datetimepikcer-dropdown-arrow-width - 1) solid transparent;
+      border-bottom: (@datetimepikcer-dropdown-arrow-width - 1) solid #fff;
+      border-top: 0;
+      position: absolute;
+    }
+    &.datetimepicker-orient-left:before {
+      left: @datetimepikcer-dropdown-arrow-width - 1;
+    }
+    &.datetimepicker-orient-left:after {
+      left: @datetimepikcer-dropdown-arrow-width;
+    }
+    &.datetimepicker-orient-right:before {
+      right: @datetimepikcer-dropdown-arrow-width - 1;
+    }
+    &.datetimepicker-orient-right:after {
+      right: @datetimepikcer-dropdown-arrow-width;
+    }
+    &.datetimepicker-orient-bottom:before {
+      top: -@datetimepikcer-dropdown-arrow-width;
+    }
+    &.datetimepicker-orient-bottom:after {
+      top: -(@datetimepikcer-dropdown-arrow-width - 1);
+    }
+    &.datetimepicker-orient-top:before {
+      bottom: -@datetimepikcer-dropdown-arrow-width;
+      border-bottom: 0;
+      border-top: @datetimepikcer-dropdown-arrow-width solid @datetimepicker-disabled-color;
+    }
+    &.datetimepicker-orient-top:after {
+      bottom: -(@datetimepikcer-dropdown-arrow-width - 1);
+      border-bottom: 0;
+      border-top: (@datetimepikcer-dropdown-arrow-width - 1) solid #fff;
+    }
+  }
+  & > div {
+    display: none;
+  }
+  table {
+    width: 100%;
+    margin: 0;
+    -webkit-touch-callout: none;
+    .user-select(none);
+    tr {
+      td, th {
+        text-align: center;
+        width: @datetimepicker-cell-width;
+        height: @datetimepicker-cell-height;
+        border-radius: @border-radius-base;
+        border: none;
+      }
+    }
+  }
+  // Inline display inside a table presents some problems with
+  // border and background colors.
+  .table-striped & table tr {
+    td, th {
+      background-color: transparent;
+    }
+  }
+
+  table tr td {
+    &.day:hover,
+    &.day.focused {
+      background: @component-hover-bg;
+      cursor: pointer;
+    }
+    &.old,
+    &.new {
+      color: @datetimepicker-disabled-color;
+    }
+    &.disabled,
+    &.disabled:hover {
+      background: none;
+      color: @datetimepicker-disabled-color;
+      cursor: default;
+    }
+    &.today,
+    &.today:hover,
+    &.today.disabled,
+    &.today.disabled:hover {
+      background-color: @datetimepicker-active-color;
+      color: @component-active-color;
+    }
+    &.today.active:hover {
+      color: @component-base-color;
+    }
+    &.active,
+    &.active:hover,
+    &.active.disabled,
+    &.active.disabled:hover {
+      background-color: @component-active-bg;
+      color: @component-active-color;
+    }
+    span {
+      display: block;
+      float: left;
+      cursor: pointer;
+      border-radius: @border-radius-base;
+      &:hover {
+        border: 1px solid @brand-info;
+      }
+      &.disabled,
+      &.disabled:hover {
+        background: none;
+        color: @datetimepicker-disabled-color;
+        cursor: default;
+      }
+      &.active,
+      &.active:hover,
+      &.active.disabled,
+      &.active.disabled:hover {
+        background-color: @component-active-bg;
+        color: @component-active-color;
+      }
+      &.old,
+      &.new {
+        color: @datetimepicker-disabled-color;
+      }
+      &.year,
+      &.month {
+        width: @datetimepicker-date-width;
+        height: @datetimepicker-date-height;
+        line-height: @datetimepicker-date-height;
+      }
+      &.hour {
+        width: @datetimepicker-date-width;
+        height: @datetimepicker-time-height;
+        line-height: @datetimepicker-time-height;
+      }
+      &.minute,
+      &.second {
+        width: @datetimepicker-time-width;
+        height: @datetimepicker-time-width;
+        line-height: @datetimepicker-time-width;
+        margin: @datetimepicker-time-margin;
+      }
+    }
+  }
+
+  .datetimepicker-switch {
+    width: @datetimepicker-switch-width;
+  }
+
+  thead tr:first-child th,
+  & tfoot .today {
+    cursor: pointer;
+  }
+}
+
+.label-hours,
+.label-minutes,
+.label-seconds {
+  &:extend(.label-default);
+  cursor: pointer;
+}
+
+.datetimepicker-now {
+  margin-left: @padding-base-horizontal;
+}

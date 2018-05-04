@@ -1,0 +1,52 @@
+<div class="iot-loaction-bar">
+    当前位置：<span>客户自助服务></span><span class="current">短信网关配置</span>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="网关IP、短信接入码、应用名称" id="search_input" style="width:200px;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" id="query">查询</button>
+                </div>
+                <div class="form-group fr">
+                    <button class="btn btn-default" type="button" id="add"><i class="ico-add-gray margin-sm-right"></i>添加</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-striped m-num-m-table" id="myTable"> </table>
+            <table style="display:none;">
+                <tr id="detail_tr">
+                    <td colspan="6" class="no-border-bg">
+                        <div class="expand clearfix">
+                            <ul>
+                                <li>短信接入码：<span name="gateway_port"></span></li>
+                                <li>企业代码：<span name="company_code"></span></li>
+                                <li>用户登录密码: <span name="login_secret"></span></li>
+                                <li>服务代码：<span name="server_code"></span></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+             </table>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="page-foot-data">
+                <span>共<span class="page-total-num">0</span>页</span>
+                <span><span class="page-data-count">0</span>条数据</span>
+            </div>
+            <div class="page-foot-form">
+                <div class="input-group col-md-14">
+                   <div id="pagination-demo" class="js-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

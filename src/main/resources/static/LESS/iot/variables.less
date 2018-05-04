@@ -1,0 +1,119 @@
+// 自定义变量  //
+@padding-base: 			4px; 				//默认的间距
+
+@border-color: 			#dfdfdf;		//默认的边线
+@divide-color:  		#efefef;		//默认的分割线
+
+@body-bg: #f8f8f8;
+@block-content-bg: 		#fff;
+@block-hover-bg:    	#F3F8FE;
+@block-accent-bg:		#fdfdfd;
+@block-disabled-bg:  	#eef0f5;
+
+@box-shadow: 0 2px 10px 0 rgba(27,116,241,.04);
+@input-line-height: 1;
+
+// 公共变量  //
+
+@brand-primary:         #1073ff;		//默认的主色，蓝色
+@brand-info:            #3f557f;		//默认的信息色，浅蓝色
+@brand-success:         #51da7f;		//默认的正确色，绿色
+@brand-warning:         #f5ac59;		//默认的警告色，黄色
+@brand-danger:          #f4596e;		//默认的错误色，红色
+
+@brand-primary-hover: mix(#fff,@brand-primary,30%);
+@brand-primary-active: mix(#000,@brand-primary,30%);
+@brand-primary-disabled: mix(#fff,@brand-primary,75%);
+
+@brand-info-hover: mix(#fff,@brand-info,30%);
+@brand-info-active: mix(#000,@brand-info,30%);
+@brand-info-disabled: mix(#fff,@brand-info,75%);
+
+@brand-success-hover: mix(#fff,@brand-success,30%);
+@brand-success-active: mix(#000,@brand-success,30%);
+@brand-success-disabled: mix(#fff,@brand-success,75%);
+
+@brand-warning-hover: mix(#fff,@brand-warning,30%);
+@brand-warning-active: mix(#000,@brand-warning,30%);
+@brand-warning-disabled: mix(#fff,@brand-warning,75%);
+
+@brand-danger-hover: mix(#fff,@brand-danger,30%);
+@brand-danger-active: mix(#000,@brand-danger,30%);
+@brand-danger-disabled: mix(#fff,@brand-danger,75%);
+
+
+@text-stress-color:     #0c1624;                                    //突出文字
+@text-color:            #3f4f66;									//主要的文字
+@text-weak-color:       #b8c0cc;									//次要的文字
+@text-weaker-color:     #aeb8cc;									//更次要的文字
+@text-disabled-color:	@text-weaker-color;							//禁用文字
+
+@font-family-base:  	"microsoft yahei","Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC","Hiragino Sans GB",Simsun,Tahoma,Arial,Roboto,sans-self;		//默认的字体
+
+@font-size-base:          12px;											//默认的字号
+@font-size-large:         14px;
+@font-size-small:         12px;
+
+@line-height-base:        1.428571429;
+@line-height-computed:    floor((@font-size-base * @line-height-base));
+@input-line-height-computed: floor((@font-size-base * @input-line-height));
+
+@padding-base-vertical:     @padding-base*2;        //8px
+@padding-base-horizontal:   @padding-base*2;        //8px
+
+@padding-middle-vertical:     @padding-base*3;    //12px
+@padding-middle-horizontal:   @padding-base*3;    //12px
+
+@padding-large-vertical:    @padding-base*4;    //16px
+@padding-large-horizontal:  @padding-base*4;    //16px
+
+@padding-small-vertical:    @padding-base;    //4px
+@padding-small-horizontal:  @padding-base;    //4px
+
+@border-radius-base:        2px;
+@border-radius-large:       @border-radius-base;
+@border-radius-small:       @border-radius-base;
+
+@panel-bg:                    @block-content-bg;
+@panel-body-padding:          @padding-base-vertical @padding-middle-vertical;
+@panel-heading-padding:       @padding-large-vertical @padding-middle-horizontal @padding-base-vertical @padding-middle-horizontal;
+@panel-footer-padding:        @padding-base-vertical @padding-middle-horizontal @padding-large-vertical  @padding-middle-horizontal;;
+@panel-border-radius:         0;
+@panel-inner-border:          @divide-color;
+@panel-footer-bg: 		      @block-content-bg;
+@panel-default-border:        @border-color;
+
+@btn-default-color:              @text-color;
+@btn-default-bg:                 @block-content-bg;
+@btn-default-border:             @border-color;
+
+@input-bg:    @block-content-bg;
+@input-color: @text-color;
+@input-border:  @border-color;
+@input-height-base:   (@input-line-height-computed + (@padding-base-vertical*2) + 2);
+@input-group-addon-bg:           @input-bg;
+@input-group-addon-border-color: @input-border;
+
+// fish--pagination //
+@pagination-color: 		@text-color;
+@pagination-bg:   		@block-content-bg;
+@pagination-border:   	@border-color;
+@pagination-padding: 	@padding-small-vertical @padding-base-horizontal;
+
+// bootstrap-table //
+@table-cell-padding:            @padding-middle-vertical @padding-middle-horizontal;
+@table-condensed-cell-padding:  @table-cell-padding;
+@table-bg:                      transparent;
+@table-bg-accent:               @block-accent-bg;
+@table-bg-hover:                @block-hover-bg;
+@table-bg-active:               @table-bg-hover;
+@table-border-color:            @divide-color;
+//fish-tabs
+@nav-tabs-link-padding : @padding-base-vertical 0;
+@nav-tabs-link-hover-padding: @nav-tabs-link-padding ;
+@nav-tabs-active-link-hover-padding: @nav-tabs-link-padding;
+@nav-disabled-link-hover-padding: @nav-tabs-active-link-hover-padding;
+@nav-tabs-panel-padding: 0;//ui-tabs-panel的边距去掉
+//bootstrap popover
+@popover-arrow-width:  6px;
+@popover-border-color: darken(@divide-color,5%);

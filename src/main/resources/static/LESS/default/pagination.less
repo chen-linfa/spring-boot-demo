@@ -1,0 +1,48 @@
+.pagination {
+    > li {
+        display: inline-table;
+        vertical-align: top;
+        >span, >a {
+            padding: @pagination-padding;
+            border: @pagination-btn-border;
+        }
+        .ellipsis {
+            max-width: @grid-pager-max-wdith;
+            .text-overflow(ellipsis);
+        }
+    }
+    .pgtext:hover,
+    .rowtext:hover,
+    .gotext:hover {
+        > span {
+            background: none;
+        }
+    }
+    li.pgtext > span {
+        margin: @pagination-span-margin;
+        color: @pagination-color;
+        border: none;
+    }
+    li.rowtext > span {
+        margin-left: 0;
+        color: @pagination-color;
+        border: none;
+        select {
+            width: @pagination-select-width;
+            margin: @pagination-margin;
+            color: @pagination-color;
+            border: 1px solid @pagination-border;
+        }
+    }
+    li.gotext > span {
+        margin-left: 0;
+        color: @pagination-color;
+        border: none;
+        input {
+            width: @pagination-input-width;
+            height: @pagination-input-height;
+            margin: @pagination-margin;
+            border: 1px solid @pagination-border;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.ui-menu {
+  z-index: @zindex-dropdown;
+  overflow-y: auto;
+
+  float: left;
+  min-width: @menu-min-width;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: left;
+  list-style: none;
+
+  background-color: @dropdown-bg;
+  border: 1px solid @default-border-color;
+
+  .ui-menu-divider { 
+    .nav-divider(@dropdown-divider-bg);
+  }
+
+  // Links within the dropdown menu
+  li {
+    position: relative;
+    > a {
+      display: block;
+      padding: @menu-padding;
+      font-weight: normal;
+      line-height: @line-height-base;
+      color: @dropdown-link-color;
+      white-space: nowrap; // prevent links from randomly breaking onto new lines
+
+      &.ui-state-focus, //:hover :focus
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: @menu-item-hover-bg;
+        border: 0;
+      }
+      &.ui-state-active {
+        text-decoration: none;
+        color: @menu-item-acitve-color;
+        background-color: @menu-item-acitve-bg;
+        border: 0;
+      }
+    }
+  }
+
+  .ui-menu { 
+    display:none;
+    position: absolute;
+  }
+
+
+}
+
+.navbar-nav {
+  &.ui-menu {
+    background-color: @brand-info;
+
+    border:0;
+    padding: 0 @navbar-menu-padding;
+    li > a {
+      padding: @navbar-menu-padding - 5;
+      margin: 0;
+      color: @gray;
+      background-color: @navbar-menu-bg;
+      border: 0;
+      &.ui-state-active,
+      &.ui-state-focus {
+        color: @gray;
+        background-color: @navbar-mneu-state-color;
+        border: 0;
+      }
+    }
+  }
+}
+
+
+.navbar-right .dropdown-menu {
+  right: auto;
+}
+
+.ui-menu {
+  .ui-state-disabled > a {
+    cursor: not-allowed;
+    .opacity(.8*@opacity-base);
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+  .ui-menu-icon { 
+    float: right; 
+    &.@{icon-prefix}-triangle-bottom{
+      margin:  @menu-icon-margin;
+      margin-left: 40px\0;
+    }
+  }
+}
+
+.ui-menu-horizontal > li{
+    float: left;
+    >a{
+      padding: @menu-horizontal-padding;
+    }
+}

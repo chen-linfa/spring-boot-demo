@@ -1,0 +1,42 @@
+<div class="iot-loaction-bar">
+    当前位置：<span>客户自助服务></span><span class="current">短信端口打开/关闭</span>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="网关IP、短信接入码、应用名称" id="search_input"style="width:200px;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" id="query">查询</button>
+                </div>
+                <div class="form-group fl">
+                    <label for="" class="control-label">状态选择：</label>
+                    <div class="input-group inp-select inp-size-s" id="bw_type">
+                        <i class="inp-slt-ico"></i>
+                        <input type="text"  class="input_selectValue" name="search_type" id="combobox1">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-striped" id="myTable"> </table>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="page-foot-data">
+                <span>共<span class="page-total-num">0</span>页</span>
+                <span><span class="page-data-count">0</span>条数据</span>
+            </div>
+            <div class="page-foot-form">
+                <div class="input-group col-md-14">
+                   <div id="pagination-demo" class="js-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

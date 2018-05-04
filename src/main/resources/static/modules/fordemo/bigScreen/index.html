@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body class="clear-fix">
+    <div class="header clear-fix">
+        <div class="fl"><img src="images/logo.png" alt=""></div>
+        <div class="time-box fr">
+            <button class="refresh fr"><i class="fr ico-loading"></i></button>
+            <div class="update-time fr">
+                <select name="" id="">
+                    <option value="">每5分钟更新</option>
+                </select>
+            </div>
+            <div class="time fr">
+                <div class="fl">
+                    <p class="text-color">2017-07-21</p>
+                    <p class="f20">16:04:56</p>
+                </div>
+                <span class="fl time-date">周五</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-left fl">
+            <div class="panel">
+                <div class="total-user-info">
+                    <div class="user-count">
+                        <p>用户总数</p>
+                        <p class="text-tips f40">35645</p>
+                    </div>
+                    <div class="user-dynamic">
+                        <div class="add">
+                            <p class="text-color mb10">新增</p>
+                            <p class="f24">6432<i class="ico-up-triangle fr"></i></p>
+                        </div>
+                        <div class="add">
+                            <p class="text-color mb10">退订</p>
+                            <p class="f24">976<i class="ico-down-triangle fr"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="user-dev-info clear-fix">
+                    <div class="title clear-fix">
+                        <div class="fl">用户发展情况</div>
+                        <div class="f14 fr text-color">
+                            <div class="fl"><i class="sub-point total"></i>用户总数</div>
+                            <div class="fl ml20"><i class="sub-point new"></i>新增用户数</div>
+                        </div>                            
+                    </div>
+                    <div class="user-dev-chart"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="company-dev-info">
+                    <div class="title">各分公司发展情况</div>
+                     <div class="company-dev-chart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-right fl clear-fix">
+            <div class="main-right-top clear-fix fl">
+                <div class="m-r-t-left fl">
+                    <div class="panel">
+                        <div class="num-stats">
+                            <div class="title">号码状态</div>
+                            <div class="stats-list clear-fix">
+                                <ul>
+                                    <li>
+                                        <div class="f14 list-item">正常</div>
+                                        <div class="f20 list-item">2131</div>
+                                        <div class="f12 text-color mb5 list-item">占比<span class="text-tips">53.4</span>%</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-bar-inner"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="f14 list-item">未激活</div>
+                                        <div class="f20 list-item">876</div>
+                                        <div class="f12 text-color mb5 list-item">占比<span class="text-tips">10.4</span>%</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-bar-inner"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="f14 list-item">停机</div>
+                                        <div class="f20 list-item">234</div>
+                                        <div class="f12 text-color mb5 list-item">占比<span class="text-tips">9.9</span>%</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-bar-inner"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="f14 list-item">测试期</div>
+                                        <div class="f20 list-item">654</div>
+                                        <div class="f12 text-color mb5 list-item">占比<span class="text-tips">13.2</span>%</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-bar-inner"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="f14 list-item">沉默期</div>
+                                        <div class="f20 list-item">654</div>
+                                        <div class="f12 text-color mb5 list-item">占比<span class="text-tips">13.2</span>%</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-bar-inner"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="f14 list-item">其他</div>
+                                        <div class="f20 list-item">1235</div>
+                                        <div class="f12 text-color mb5 list-item">占比<span class="text-tips">27.7%</span>%</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-bar-inner"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="terminal-distribution">
+                            <div class="title">终端分布情况</div>
+                            <div class="terminal-chart"></div>
+                            <div><button class="btn-mapsMode">点击进入地图模式</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-r-t-right fl">
+                    <div class="panel">
+                        <div class="group-cust-count">
+                            <div class="cust-count">
+                                <p>用户总数</p>
+                                <p class="text-tips f40">35645</p>
+                            </div>
+                            <div class="group-dynamic">
+                                <div class="add">
+                                    <p class="text-color mb10">新增</p>
+                                    <p class="f24">1890<i class="ico-up-triangle fr"></i></p>
+                                </div>
+                                <div class="add">
+                                    <p class="text-color mb10">退订</p>
+                                    <p class="f24">564<i class="ico-down-triangle fr"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel last">
+                        <div class="api-data">
+                            <div class="title clear-fix">
+                                <div class="fl">API调用一周数据</div>
+                                <div class="fr">
+                                    <div class="text-color">今日API调用次数</div>
+                                    <div class="f30 text-right">367次</div>
+                                </div>
+                            </div>
+                            <div class="chart-api"></div>
+                            <div class="rank-list clear-fix">
+                                <ul>
+                                    <li class="rank-item api-list">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>排名</th>
+                                                    <th class="text-tips">集团</th>
+                                                    <th class="text-right">调用<span>(次)</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center text-one">1</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">215</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-two">2</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">235</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-three">3</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">784</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-four">4</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">235</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-five">5</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">878</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li class="rank-item api-list">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>排名</th>
+                                                    <th class="text-tips">API</th>
+                                                    <th class="text-right">调用<span>(次)</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center text-one">1</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">454</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-two">2</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">44</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-three">3</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">935</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-four">4</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-five">5</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-right-bottom fl">
+                    <div class="panel last">
+                        <div class="group-ranking">
+                            <div class="title">集团业务排行榜</div>
+                            <div class="rank-list">
+                                <ul>
+                                    <li class="rank-item">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>排名</th>
+                                                    <th>集团</th>
+                                                    <th class="text-right text-tips">用户数<span>(个数)</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center text-one">1</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-two">2</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-three">3</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-four">4</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-five">5</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li class="rank-item">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>排名</th>
+                                                    <th>集团</th>
+                                                    <th class="text-right text-tips">用户数<span>(MB)</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center text-one">1</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-two">2</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-three">3</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-four">4</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-five">5</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li class="rank-item">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>排名</th>
+                                                    <th>集团</th>
+                                                    <th class="text-right text-tips">用户数<span>(分钟)</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center text-one">1</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-two">2</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-three">3</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-four">4</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-five">5</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li class="rank-item">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>排名</th>
+                                                    <th>集团</th>
+                                                    <th class="text-right text-tips">用户数<span>(条)</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center text-one">1</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-two">2</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-three">3</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-four">4</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-five">5</td>
+                                                    <td>187546875464</td>
+                                                    <td class="text-right">905487</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script src="js/jquery-1.12.2.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/index.js"></script>
+
+</html>

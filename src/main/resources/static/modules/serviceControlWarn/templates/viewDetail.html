@@ -1,0 +1,42 @@
+<div class="modal-header clearfix">
+    <span class="modal-title">查看已配置成员</span>
+    <i class="fr ico-close"></i>
+</div>
+<div class="modal-body none-border clearfix">
+    <div class="iot-panel-group">
+        <div class="panel panel-default">
+            <table class="table table-striped" id="detail_data_list">
+            </table>
+            <table style="display:none;">
+                <tr id="detail_tr">
+                    <td colspan="6" class="no-border-bg">
+                        <div class="expand clearfix">
+                            <ul>
+                                <li>卡号：<span name="MEM_USER_ID"></span></li>
+                                <li>业务类型：<span name="MEM_TYPE"></span></li>
+                                <li>使用值：<span name="USERING_VALUE"></span></li>
+                                <li>告警信息：<span name="WARNING_COMMENT"></span></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+        </table>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="page-foot-data">
+                <span>共<span class="page-total-num">0</span>页</span>
+                <span><span class="page-data-count">0</span>条数据</span>
+            </div>
+            <div class="page-foot-form">
+                <div class="input-group">
+                    <div id="pagination-demo" class="js-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="form-group no-margin-bottom">
+        <button class="btn btn-default cancel_btn" type="button">取消</button>
+    </div>
+</div>

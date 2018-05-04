@@ -1,0 +1,6 @@
+.grid-height(@index) when (@index > 0){
+  height: @index * @grid-td-cell-height + @grid-th-cell-height;
+}
+.gridpage-height(@index) when (@index > 0){
+  height: @index * @grid-td-cell-height + @grid-th-cell-height + @grid-pager-height;
+}

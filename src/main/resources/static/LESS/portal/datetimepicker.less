@@ -1,0 +1,200 @@
+
+// Datetimepicker for Bootstrap
+ 
+[class*="datetimepicker-dropdown"]:after,
+[class*="datetimepicker-dropdown"]:before{
+  display: none;
+}
+.datetimepicker {
+  padding: 0;
+  white-space: normal;
+  direction: ltr;
+  width: auto;
+  font-size: (@font-size-base - 1);
+  & > div {
+    display: none;
+  }
+  &.minutes {
+    div {
+      &.datetimepicker-minutes {
+        display: block;
+      }
+    }
+  }
+  &.hours {
+    div {
+      &.datetimepicker-hours {
+        display: block;
+      }
+    }
+  }
+  &.days {
+    div {
+      &.datetimepicker-days {
+        display: block;
+      }
+    }
+  }
+  &.months {
+    div {
+      &.datetimepicker-months {
+        display: block;
+      }
+    }
+  }
+  &.years {
+    div {
+      &.datetimepicker-years {
+        display: block;
+      }
+    }
+  }
+  table {
+    margin: 0;
+    border-collapse: separate;
+    width: 100%;
+    tr {
+      td {
+        border: 0;
+        cursor: pointer;
+        padding: @padding-base-vertical;
+        &.minute {
+          &:hover {
+            background-color: @date-bg-color;
+            color: @component-active-color;
+          }
+        }
+        &.hour {
+          &:hover {
+            background-color: @date-bg-color;
+            color: @component-active-color;
+          }
+        }
+        &.day {
+          border-radius: @border-radius-base;
+          &:hover {
+            background-color: @date-bg-color;
+            color: @component-active-color;
+          }
+          &.active,
+          &:active {
+            background-color: @date-active-bg;
+            color: @component-active-color;
+          }
+          &.today{
+            background-color: @datetimepicker-today-bg-color;
+            color: @text-color;
+          }
+        }
+        span {
+          display: block;
+          width: @datetimepicker-cell-width;
+          line-height: @datetimepicker-cell-height;
+          float: left;
+          cursor: pointer;
+          border-radius: @border-radius-base;
+          &.year,&.month,&.hour{
+            width: @datetimepicker-date-width;
+            line-height: @datetimepicker-date-height;
+          }
+          &:hover {
+            background-color: @date-bg-color;
+            color: @component-active-color;
+          }
+          &.active {
+            background-color: @date-active-bg;
+            color: @component-active-color;
+          }
+          &.old {
+            color: lighten(@gray-dark, 40%);
+          }
+        }
+      }
+    }
+  }
+  .datetimepicker-hours {
+    span {
+      height: @datetimepicker-cell-height;
+      line-height: @datetimepicker-cell-height;
+    }
+  }
+  .datetimepicker-minutes {
+    span {
+      height: @datetimepicker-cell-height;
+      line-height: @datetimepicker-cell-height;
+    }
+  }
+  th {
+    &.switch {
+      width: @datetimepicker-switch-width;
+    }
+  }
+}
+
+.datetimepicker-inline {
+  width: @datetimepicker-inline-width;
+}
+.datetimepicker-days table{
+  display: block;
+  thead,tfoot{
+     display: table;
+     width: 100%;
+  }
+  thead{
+    background-color: @date-bg-color;
+  }
+  tbody{
+    display: table; 
+    padding: @padding-base-horizontal - 1;
+    width: 100%;
+  }
+}
+.datetimepicker td,
+.datetimepicker th {
+  text-align: center;
+  width: @datetimepicker-cell-width;
+  height: @datetimepicker-cell-height;
+}
+
+.table-striped .datetimepicker table tr td,
+.table-striped .datetimepicker table tr th {
+  background-color: transparent;
+}
+
+.datetimepicker table tr td.old,
+.datetimepicker table tr td.new {
+  color: lighten(@gray-dark, 40%);//#999
+}
+
+.datetimepicker table tr td.disabled,
+.datetimepicker table tr td.disabled:hover {
+  background: none;
+  color: @date-disabled-color;
+  cursor: default;
+}
+.datetimepicker thead tr{
+  &:first-child{
+    background-color: @date-bg-color;
+    color: @component-active-color;
+    cursor: pointer;
+    .disabled {
+      color: @gray-light;
+    }
+  }
+  &.week{
+    background-color: @component-active-color;
+  }
+}
+.datetimepicker tfoot tr:first-child {
+  background-color: @input-bg-disabled;
+  cursor: pointer;
+  th{
+    border-top: 1px solid darken(@default-border-color, 10%);
+  }
+}
+.label-hours,
+.label-minutes,
+.label-seconds {
+  &:extend(.label-default);
+  cursor: pointer;
+}

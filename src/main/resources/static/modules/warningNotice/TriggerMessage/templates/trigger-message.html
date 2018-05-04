@@ -1,0 +1,42 @@
+<div class="iot-loaction-bar">
+    当前位置：<a href="#" class="link-text">告警通知></a><a class="current">触发消息管理</a>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline" onkeydown="if(event.keyCode==13){return false;}">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入规则配置名称" id="cfg_name" style="width:250px;">
+                </div>
+                <div class="form-group">
+                	<input type="text" id="cat_name" />
+                </div>
+                <div class="form-group">
+                	<input type="text" id="rule_name" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" id="btn_search">查询</button>
+                </div>
+            </form>
+            <input type="file" id="cust_mem_info_file" style="visibility:hidden;height:0px;">
+        </div>
+    </div>
+    <div class="panel panel-default">
+    	  <div class="table-responsive">
+	        <table class="table" id="xtab" >
+	        </table>
+        </div>
+    </div>
+    <div class="panel-footer clearfix" >
+        <div class="page-foot-data">
+            <span>共<span class="page-total-num">0</span>页</span>
+            <span><span class="page-data-count">0</span>条数据</span>
+        </div>
+        <div class="page-foot-form">
+            <div class="input-group col-md-14">
+                <div id="pagination-demo" class="js-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

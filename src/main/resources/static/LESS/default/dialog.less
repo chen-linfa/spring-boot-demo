@@ -1,0 +1,60 @@
+.ui-dialog {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: @modal-content-bg;
+  border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+  border: 1px solid @modal-content-border-color;
+  border-radius: @border-radius-large;
+  .box-shadow(@modal-shadow);
+  background-clip: padding-box;
+  outline: 0;
+  .modal-header {
+    background-color: @modal-header-bg;
+    color: @modal-header-color;
+    border-bottom: @modal-header-border-bottom;
+    
+    .close {
+      color: @modal-header-color;
+      text-shadow: none;
+      margin-top: 0;
+      .opacity(@opacity-base);
+      &:hover {
+        .opacity(2*@opacity-base);
+      }
+    }
+
+  }
+
+  &.dialog-xl {
+    width: @modal-dialog-xl;
+  }
+
+  &.dialog-lg {
+    width: @modal-dialog-lg;
+  }
+
+  &.dialog-md {
+    width: @modal-dilaog-md;
+  }
+
+  &.dialog-sm {
+    width: @modal-dilaog-sm;
+  }
+
+  &.dialog-xs {
+    width: @modal-dilaog-xs;
+  }
+}
+.ui-draggable .modal-header {
+  cursor: move;
+}
+
+.ui-resizable.modal-dialog {
+  overflow: hidden;
+}
+
+.ui-resizable .modal-content {
+  height: 100%;
+}

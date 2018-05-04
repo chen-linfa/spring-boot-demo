@@ -1,0 +1,213 @@
+.ztree {
+  position: relative;
+  margin: 0;
+  padding: @tree-padding;
+  overflow: auto;
+  
+  li {
+    line-height: @tree-icon-height;
+    list-style: none;
+    white-space: nowrap;
+    ul {
+      padding-left: @tree-ul-padding;
+      &.line {
+        background: url(@tree-line-url) repeat-y;
+      }
+    }
+    a {
+      cursor: pointer;
+      color: @tree-text-color;
+      background-color: transparent;
+      display: inline-block;
+      &:hover{
+        text-decoration: none;
+        &:after {
+          background-color: @tree-item-hover-bg;
+        }
+      }
+      &.curSelectedNode {
+        color: @tree-item-active-color;
+        &:after {
+          background-color: @tree-item-active-bg;
+        }
+      }
+      &:hover,
+      &.curSelectedNode{
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: @tree-icon-height;
+          z-index: 0;
+        }
+      }
+      &.curSelectedNode_Edit {
+        padding-top: 0;
+        .opacity(@tree-node-opacity);
+      }
+      .rename {
+        display: inline-block;
+        height: auto;
+        width: @tree-edit-width;
+        padding: 0 @tree-padding;
+      }
+    }
+    .tree-icon {
+      color: @tree-icon-color;
+    }
+    span {
+      position: relative;
+      margin-left: @tree-icon-margin;
+      margin-right: @tree-icon-margin;
+      display: inline-block;
+      z-index: 9;
+
+      &.add {
+        &:extend(.glyphicon);
+        &:extend(.glyphicon-plus all);
+      }
+
+      &.button {
+        width: @tree-icon-width;
+        height: @tree-icon-width;
+        display: inline-block;
+        background: url(@tree-icon-url) no-repeat;
+
+        &.chk {
+          width: @tree-select-width;
+          height: @tree-select-height;
+          margin-right: @tree-padding;
+
+          &.checkbox_false_full {
+            background-position: 0 0;
+          }
+          &.checkbox_false_full_focus {
+            background-position: 0 -14px;
+          }
+          &.checkbox_false_part {
+            background-position: 0 -28px;
+          }
+          &.checkbox_false_part_focus {
+            background-position: 0 -42px;
+          }
+          &.checkbox_false_disable {
+            background-position: 0 -56px;
+          }
+          &.checkbox_true_full {
+            background-position: -14px 0;
+          }
+          &.checkbox_true_full_focus {
+            background-position: -14px -14px;
+          }
+          &.checkbox_true_part {
+            background-position: -14px -28px;
+          }
+          &.checkbox_true_part_focus {
+            background-position: -14px -42px;
+          }
+          &.checkbox_true_disable {
+            background-position: -14px -56px;
+          }
+          &.radio_false_full {
+            background-position: -28px 0;
+          }
+          &.radio_false_full_focus {
+            background-position: -28px -14px;
+          }
+          &.radio_false_part {
+            background-position: -28px -28px;
+          }
+          &.radio_false_part_focus {
+            background-position: -28px -42px;
+          }
+          &.radio_false_disable {
+            background-position: -28px -56px;
+          }
+          &.radio_true_full {
+            background-position: -42px 0;
+          }
+          &.radio_true_full_focus {
+            background-position: -42px -14px;
+          }
+          &.radio_true_part {
+            background-position: -42px -28px;
+          }
+          &.radio_true_part_focus {
+            background-position: -42px -42px;
+          }
+          &.radio_true_disable {
+            background-position: -42px -56px;
+          }
+        }
+
+        &.root_docu {
+          background: none;
+        }
+        &.roots_docu {
+          background-position: -56px 0;
+        }
+        &.center_docu {
+          background-position: -58px -18px;
+        }
+        &.noline_docu {
+          background: none;
+        }
+        &.bottom_docu {
+          background-position: -58px -36px;
+        }
+        &.ico_open{
+          background-position: -110px -14px;
+        }
+        &.ico_close {
+          background-position: -110px 2px;
+        }
+        &.ico_docu {
+          background-position: -110px -30px;
+        }
+        &.ico_loading {
+          background: url(@tree-loading-url) no-repeat scroll 0 0 transparent;
+        }
+      }
+      &.switch{
+        width: @tree-icon-width;
+        height: @tree-icon-width;
+      }
+    }
+  }
+
+}
+.tmpTargetzTree {
+  background-color: #FFE6B0;
+  .opacity(.8);
+}
+.ztree.zTreeDragUL {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  background-color: #cfcfcf;
+  border: 1px #00B83F dotted;
+  .opacity(.8);
+  z-index: @zindex-tree-drag;
+}
+.tmpzTreeMove_arrow {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  padding: 0;
+  margin: 2px 0 0 1px;
+  border: 0 none;
+  position: absolute;
+  background: url("../img/tree.png") no-repeat -110px -80px;
+  z-index: @zindex-tree-drag;
+}
+
+.zTreeMask {
+  z-index: 10000;
+  background-color: @tree-mask-color;
+  position: absolute;
+  .opacity(0);
+}

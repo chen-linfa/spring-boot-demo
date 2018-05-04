@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Job">
+    <select id="getNextVal" parameterType="Map" resultType="String">
+        select max(job_info_id)+1 from t_b_qrtz_job_info
+    </select>
+
+    <select id="queryJobInfo" parameterType="Map" resultType="Map">
+        select a.job_info_id,
+        a.job_info_name,
+        a.start_now,
+        a.create_date,
+        b.job_name,
+        b.job_group,
+        a.job_class_name,
+        b.description,
+        d.cron_expression,
+        from_unixtime(c.prev_fire_time) prev_fire_time,
+        from_unixtime(c.next_fire_time) next_fire_time,
+        c.trigger_state,
+        a.hosts
+        from t_b_qrtz_job_info      a,
+        t_b_qrtz_job_details   b,
+        t_b_qrtz_triggers      c,
+        t_b_qrtz_cron_triggers d
+        where b.job_name = a.job_name
+        and b.job_group = a.job_group
+        and c.job_name = b.job_name
+        and c.job_group = b.job_group
+        and d.trigger_name = c.trigger_name
+        and d.trigger_group = c.trigger_group
+        <if test="job_info_name != null and job_info_name != ''">
+            and a.job_info_name like '%' || #{job_info_name} || '%'
+        </if>
+        <if test="trigger_state != null and trigger_state != ''">
+            and c.trigger_state = #{trigger_state}
+        </if>
+        <if test="job_info_id != null and job_info_id != ''">
+            and a.job_info_id = #{job_info_id}
+        </if>
+        order by a.job_info_id desc
+    </select>
+
+    <insert id="insertJobInfo" parameterType="JobInfo">
+        insert into t_b_qrtz_job_info (job_info_id, job_info_name, job_name, job_group, start_now, create_date, hosts, job_class_name)
+        values
+        (#{job_info_id}, #{job_info_name}, #{job_name}, #{job_group}, #{start_now}, str_to_date(#{create_date}, '%Y-%m-%d %H:%i:%s'),#{hosts}, #{job_class_name} )
+    </insert>
+
+    <select id="queryTriggerState" parameterType="Map" resultType="String">
+        select trigger_state from t_b_qrtz_triggers where job_name = #{job_name} and job_group = #{job_group}
+    </select>
+
+    <update id="updateJobInfo" parameterType="JobInfo">
+        update t_b_qrtz_job_info set job_info_name = #{job_info_name}, start_now = #{start_now}, hosts = #{hosts} where job_info_id = #{job_info_id}
+    </update>
+
+    <delete id="deleteJobInfo" parameterType="String">
+        delete from t_b_qrtz_job_info where job_info_id = #{job_info_id}
+    </delete>
+</mapper>

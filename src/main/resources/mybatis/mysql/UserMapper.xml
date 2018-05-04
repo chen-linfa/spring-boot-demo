@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SysUser">
+
+    <select id="querySysUser" parameterType="Map" resultType="Map">
+        select user_id ,user_name, user_pwd
+        from sys_user
+        where 1=1
+        <if test="user_name != null">
+          and user_name like CONCAT('%',#{user_name},'%')
+        </if>
+    </select>
+
+    <select id="querySysMenu" parameterType="Map" resultType="Map">
+        select a.*,
+        (select menu_name from sys_menu where menu_id=a.parent_id) as parent_name,
+        (select path_code from sys_menu where menu_id=a.parent_id) as parent_path_code,
+        (select path_name from sys_menu where menu_id=a.parent_id) as parent_path_name
+        from sys_menu a where status_cd = '1000'
+        <if test="menu_id != null and menu_id != ''">
+            and a.menu_id = #{menu_id}
+        </if>
+        <if test="menu_name != null and menu_name != ''">
+            and a.menu_name like CONCAT('%', #{menu_name}, '%')
+        </if>
+        <if test="path_code != null and path_code != ''">
+            and a.path_code like CONCAT(#{path_code},'.%')
+        </if>
+        order by order_id
+    </select>
+</mapper>

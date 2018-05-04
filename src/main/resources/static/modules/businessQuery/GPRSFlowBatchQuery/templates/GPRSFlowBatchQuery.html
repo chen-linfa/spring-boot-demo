@@ -1,0 +1,36 @@
+<div class="iot-loaction-bar">
+    当前位置：
+    <a href="#" class="link-text"></a>业务查询></a>
+    <a class="current">GPRS流量批量查询</a>
+</div>
+<div class="iot-panel-group">
+    <div class="panel">
+        <div class="panel-control-bar">
+            <form class="form-inline clearfix">
+                <div class="form-group fr">
+                    <button class="btn btn-default" type="button" name="batch_flow_temp"><i class="ico-download margin-sm-right"></i>下载批量查询模板</button>
+                    <label class="btn btn-default" for="flowinfo_file"><i class="ico-upload margin-sm-right" ></i>上传批量查询</label>
+                </div>
+            </form>
+            <input type="file" id="flowinfo_file" style="visibility:hidden;height:0px;">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <table class="table table-striped js-flow-table"></table>
+        <table style="display:none;">
+                <tr id="detail_tr">
+                    <td colspan="6" class="no-border-bg">
+                        <div class="expand clearfix">
+                            <ul>
+                                <li>通话分钟数（单位分）：<span class="js-outTeleminutes"></span></li>
+                                <li>使用短信数（单位条）：<span class="js-outMassage"></span></li>
+                                <li>使用流量数（单位MB）:<span class="js-outflows"></span></li>
+                                <li>卡号状态：彩信（单位条）:<span class="js-outColmassage"></span></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+        </table>
+    </div>
+</div>
+</div>
